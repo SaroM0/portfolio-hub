@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./ScrollToTop.css";
 
 function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,15 +28,18 @@ function ScrollToTop() {
   }, []);
 
   const scrollToTop = () => {
-    const scrollContainer = document.querySelector(".snap-container");
-    if (scrollContainer) {
-      scrollContainer.scrollTo({
+    const container = document.querySelector(".snap-container");
+
+    // Smooth scroll to the top of the container
+    if (container) {
+      container.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-    } else {
-      console.error("Scroll container not found");
     }
+
+    // Update the URL hash to match the home section
+    window.location.hash = "#landing"; // Optional for hash navigation
   };
 
   return (

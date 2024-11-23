@@ -1,0 +1,70 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 95%;
+  z-index: 1000;
+  background-color: var(--bg-uiux-4, #2b3040);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Navbar content container */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 11200px;
+}
+
+/* Navbar links */
+.nav-link {
+  color: var(--text-uiux-2, #cbc5d9);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.nav-link.active {
+  color: var(--text-uiux-5, #bdf2ae);
+  font-weight: bold;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+  color: var(--text-uiux-5, #bdf2ae);
+}
+
+/* Separator between links */
+.separator {
+  color: var(--text-uiux-2, #cbc5d9);
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+/* Animation: Slide down */
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .nav-link,
+  .separator {
+    margin: 0.5rem 0;
+  }
+}

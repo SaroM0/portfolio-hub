@@ -1,12 +1,12 @@
 import React from "react";
-import Navbar from "./components/common/Navbar";
+import Navbar from "./components/common/Navbar/Navbar";
 import LandingPage from "./components/pages/Landing/LandingPage";
 import About from "./components/pages/about/About";
 import Education from "./components/pages/Education/Education";
 import Experience from "./components/pages/Experience/Experience";
 import Projects from "./components/pages/Projects/Projects";
-import Section from "./components/common/Section";
-import ScrollToTop from "./components/common/ScrollToTop";
+import Section from "./components/common/Section/Section";
+import ScrollToTop from "./components/common/SrollToTop/ScrollToTop";
 
 function App() {
   return (

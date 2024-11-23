@@ -1,0 +1,139 @@
+/* Hero container */
+.hero-container {
+  width: 600px;
+  margin-top: -20vh;
+  margin-left: -60vh;
+  text-align: left;
+  font-family: "Kanit", sans-serif;
+  color: var(--text-uiux-2, #cbc5d9);
+}
+
+/* Static text styling */
+.static-text {
+  font-size: 1.5rem;
+  color: var(--text-uiux-5, #bdf2ae);
+  margin-bottom: 1rem;
+}
+
+/* Animated text styling */
+.animated-text {
+  font-size: 3rem;
+  font-weight: 300;
+  display: inline;
+  white-space: nowrap;
+}
+
+.dynamic-text {
+  color: var(--text-uiux-3, #9f96d9); /* Use your preferred palette */
+}
+
+/* Blinking cursor styling */
+.blinking-cursor {
+  margin-top: 0;
+  display: inline-block;
+  width: 1.5px;
+  height: 1em;
+  background-color: currentColor;
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  animation: blink 1s steps(1, start) infinite; /* Blinking animation after typing */
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.subtext {
+  color: var(--text-uiux-3, #9f96d9);
+  margin-top: 1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: justify;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fade-in-right 0.8s ease-out 0.5s forwards;
+}
+
+/* Keyframes for the fade-in and slide effect */
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Social Media Container */
+.social-media {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 2rem;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+/* Social Media Icons */
+.social-icon {
+  font-size: 2rem;
+  color: var(--text-uiux-2, #cbc5d9);
+  margin: 0.5rem 0;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: fall 0.8s ease-out forwards;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.social-icon:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.social-icon:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/* Animation for the falling effect */
+@keyframes fall {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for interactivity */
+.social-icon:hover {
+  color: var(--text-uiux-5, #bdf2ae);
+  transform: scale(1.2);
+}

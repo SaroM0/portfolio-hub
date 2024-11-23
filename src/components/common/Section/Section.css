@@ -1,0 +1,35 @@
+/* Each section takes up one viewport height */
+.snap-section {
+  scroll-snap-align: start;
+  height: 110vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly offset */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Move into place */
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px); /* Move slightly down */
+}

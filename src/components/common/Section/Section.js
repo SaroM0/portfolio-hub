@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import "./Section.css";
 
 const Section = ({ id, children }) => {
   const [isVisible, setIsVisible] = useState(false);
