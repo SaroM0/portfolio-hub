@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "../components/Hero";
-import SocialMedia from "../components/SocialMedia";
+import Hero from "./Hero";
+import SocialMedia from "./SocialMedia";
 
 function LandingPage() {
   return (
-    <div className="landing-page">
+    <div id="landing" className="landing">
       <Hero />
       <SocialMedia />
     </div>

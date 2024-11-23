@@ -1,28 +1,35 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Pages
-import LandingPage from "./pages/LandingPage";
-import AboutPage from "./pages/AboutPage";
-import EducationPage from "./pages/EducationPage";
-import ExperiencePage from "./pages/ExperiencePage";
-
-// Components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/common/Navbar";
+import LandingPage from "./components/pages/Landing/LandingPage";
+import About from "./components/pages/about/About";
+import Education from "./components/pages/Education/Education";
+import Experience from "./components/pages/Experience/Experience";
+import Projects from "./components/pages/Projects/Projects";
+import Section from "./components/common/Section";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white font-kanit">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/education" element={<EducationPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
-        </Routes>
-      </Router>
+    <div className="app">
+      <Navbar />
+      <ScrollToTop />
+      <div className="snap-container">
+        <Section id="landing">
+          <LandingPage />
+        </Section>
+        <Section id="about">
+          <About />
+        </Section>
+        <Section id="education">
+          <Education />
+        </Section>
+        <Section id="experience">
+          <Experience />
+        </Section>
+        <Section id="projects">
+          <Projects />
+        </Section>
+      </div>
     </div>
   );
 }

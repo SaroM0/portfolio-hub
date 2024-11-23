@@ -1,12 +1,18 @@
-body,
-html {
+html,
+body {
   background-color: #2b3040;
   color: #fff;
   font-family: "Kanit", sans-serif;
   margin: 0;
   padding: 0;
+  overflow: auto; /* Allow scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
 /* Background Colors */
 .bg-uiux-1 {
   background-color: #5a24a6;
@@ -61,8 +67,8 @@ html {
 /* Hero container */
 .hero-container {
   width: 600px;
+  margin-top: -20vh;
   margin-left: -60vh;
-  margin-top: 23vh;
   text-align: left;
   font-family: "Kanit", sans-serif;
   color: var(--text-uiux-2, #cbc5d9);
@@ -150,14 +156,15 @@ html {
 
 /* Navbar container */
 .navbar {
-  position: sticky;
+  position: fixed; /* Keeps the navbar always visible */
   top: 0;
+  width: 95%;
   z-index: 1000;
-  background-color: var(--bg-uiux-4, #2b3040);
-  color: var(--text-uiux-2, #cbc5d9);
-  padding: 1.5rem 2rem;
-  animation: slide-down 1s ease-out forwards;
-  transform: translateY(-100%);
+  background-color: var(--bg-uiux-4, #2b3040); /* Match your palette */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* Navbar content container */
@@ -170,12 +177,17 @@ html {
 
 /* Navbar links */
 .nav-link {
-  color: var(--text-uiux-2, #cbc5d9);
+  color: var(--text-uiux-2, #cbc5d9); /* Default text color */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Smooth color transition */
   margin: 0 0.5rem;
+}
+
+.nav-link.active {
+  color: var(--text-uiux-5, #bdf2ae); /* Highlight active link in green */
+  font-weight: bold; /* Optional: Make the active link bold */
 }
 
 /* Hover effect for links */
@@ -219,7 +231,7 @@ html {
   flex-direction: column;
   position: absolute;
   left: 2rem;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
 }
 
@@ -261,4 +273,78 @@ html {
 .social-icon:hover {
   color: var(--text-uiux-5, #bdf2ae);
   transform: scale(1.2);
+}
+
+/* Scroll snapping container */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh; /* Full viewport height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.snap-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* Each section takes up one viewport height */
+.snap-section {
+  scroll-snap-align: start;
+  height: 110vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly offset */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Move into place */
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px); /* Move slightly down */
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem; /* Position above the bottom of the screen */
+  right: 2rem; /* Position from the right of the screen */
+  background-color: var(--bg-uiux-4, #2b3040); /* Match your color palette */
+  color: var(--text-uiux-5, #bdf2ae); /* Green text color */
+  border: none;
+  border-radius: 50%; /* Round button */
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Keep above other elements */
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
