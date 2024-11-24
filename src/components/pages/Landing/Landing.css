@@ -2,7 +2,7 @@
 .hero-container {
   width: 600px;
   margin-top: -20vh;
-  margin-left: -60vh;
+  margin-left: -70vh;
   text-align: left;
   font-family: "Kanit", sans-serif;
   color: var(--text-uiux-2, #cbc5d9);
@@ -10,21 +10,21 @@
 
 /* Static text styling */
 .static-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--text-uiux-5, #bdf2ae);
   margin-bottom: 1rem;
 }
 
 /* Animated text styling */
 .animated-text {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   display: inline;
   white-space: nowrap;
 }
 
 .dynamic-text {
-  color: var(--text-uiux-3, #9f96d9); /* Use your preferred palette */
+  color: var(--text-uiux-3, #9f96d9);
 }
 
 /* Blinking cursor styling */
@@ -42,7 +42,7 @@
 }
 
 .visible {
-  animation: blink 1s steps(1, start) infinite; /* Blinking animation after typing */
+  animation: blink 1s steps(1, start) infinite;
 }
 
 /* Blinking cursor effect */
@@ -61,6 +61,7 @@
   margin-top: 1rem;
   line-height: 1.5;
   max-width: 600px;
+  font-size: 1.2rem;
   margin-left: auto;
   margin-right: 0;
   text-align: justify;

@@ -1,37 +1,37 @@
 .scroll-to-top {
   position: fixed;
-  bottom: 2rem; /* Position above the bottom of the screen */
-  right: 2rem; /* Position from the right of the screen */
-  background-color: var(--bg-uiux-4, #2b3040); /* Match your color palette */
-  color: var(--text-uiux-5, #bdf2ae); /* Green text color */
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--bg-uiux-4, #2b3040);
+  color: var(--text-uiux-5, #bdf2ae);
   border: none;
-  border-radius: 50%; /* Round button */
+  border-radius: 50%;
   width: 3rem;
   height: 3rem;
   font-size: 1.5rem;
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1000; /* Keep above other elements */
+  z-index: 1000;
 }
 
 .scroll-to-top:hover {
   opacity: 1;
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1);
 }
 
 /* Scroll snapping container */
 .snap-container {
   scroll-snap-type: y mandatory;
-  height: 100vh; /* Full viewport height */
-  overflow-y: scroll; /* Enable vertical scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 
   /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .snap-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for WebKit browsers */
+  display: none;
 }

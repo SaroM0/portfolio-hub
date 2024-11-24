@@ -30,7 +30,6 @@ function ScrollToTop() {
   const scrollToTop = () => {
     const container = document.querySelector(".snap-container");
 
-    // Smooth scroll to the top of the container
     if (container) {
       container.scrollTo({
         top: 0,
@@ -38,8 +37,7 @@ function ScrollToTop() {
       });
     }
 
-    // Update the URL hash to match the home section
-    window.location.hash = "#landing"; // Optional for hash navigation
+    window.location.hash = "#landing";
   };
 
   return (

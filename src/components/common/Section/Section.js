@@ -6,13 +6,13 @@ const Section = ({ id, children }) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const currentRef = sectionRef.current; // Save the ref to a local variable
+    const currentRef = sectionRef.current;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.6 } // Trigger when 60% of the section is visible
+      { threshold: 0.6 }
     );
 
     if (currentRef) {
@@ -24,7 +24,7 @@ const Section = ({ id, children }) => {
         observer.unobserve(currentRef);
       }
     };
-  }, []); // Ensure that the dependency array remains empty
+  }, []);
 
   return (
     <div

@@ -5,13 +5,7 @@ body {
   font-family: "Kanit", sans-serif;
   margin: 0;
   padding: 0;
-  overflow: auto; /* Allow scrolling */
-  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
-}
-
-html::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit browsers */
+  overflow: auto;
 }
 
 /* Background Colors */
