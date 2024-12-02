@@ -1,14 +1,18 @@
 import React from "react";
+import Bio from "./Bio";
+import Skills from "./Skills";
+import Interests from "./Interests";
+import "./About.css";
 
 function About() {
   return (
-    <section id="about" className="py-20 bg-white text-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6">About Me</h2>
-        <p className="text-lg leading-relaxed">
-          I'm a software engineer with experience in full-stack development. I
-          specialize in building scalable and performant applications.
-        </p>
+    <section className="about-me-container">
+      <div className="about-me-left">
+        <Bio />
+      </div>
+      <div className="about-me-right">
+        <Skills />
+        <Interests />
       </div>
     </section>
   );

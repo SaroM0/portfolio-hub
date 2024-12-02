@@ -1,7 +1,8 @@
 /* Each section takes up one viewport height */
 .snap-section {
   scroll-snap-align: start;
-  height: 110vh;
+  min-height: 100vh; /* Garantiza al menos una altura igual al viewport */
+  height: 100vh; /* Secciones normales ocupan un viewport completo */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,0 +1,117 @@
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centrado vertical */
+  gap: 40px;
+  padding: 50px;
+  margin: 0 auto;
+  min-height: 80vh; /* Asegura que el contenedor ocupe al menos el 80% de la altura de la ventana */
+}
+
+.about-me-left,
+.about-me-right {
+  flex: 1;
+}
+
+.about-me-left {
+  text-align: left;
+  display: flex; /* Alineación interna */
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical interno */
+}
+
+.bio-container {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.bio-content {
+  max-width: 1000px;
+}
+
+.bio-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.skills-container,
+.interests-container {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: var(--bg-dark);
+}
+
+.skills-container h2,
+.interests-container h2 {
+  font-size: 1.6rem;
+  color: #9f96d9;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.skills-content ul,
+.interests-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-content li,
+.interests-container li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Responsividad para dispositivos pequeños */
+@media (max-width: 768px) {
+  .about-me-container {
+    flex-direction: column;
+    align-items: center; /* Centrado vertical en dispositivos pequeños */
+    text-align: center;
+  }
+
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.download-cv {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #121212;
+  background-color: #a8ee95;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #9f96d9;
+  transform: scale(1.05);
+}

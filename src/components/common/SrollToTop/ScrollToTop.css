@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: var(--bg-uiux-4, #2b3040);
-  color: var(--text-uiux-5, #bdf2ae);
+  background-color: var(--bg-uiux-4, #121212);
+  color: var(--text-uiux-5, #a8ee95);
   border: none;
   border-radius: 50%;
   width: 3rem;

@@ -4,7 +4,7 @@
   top: 0;
   width: 95%;
   z-index: 1000;
-  background-color: var(--bg-uiux-4, #2b3040);
+  background-color: var(--bg-uiux-4, #121212);
   padding: 1rem 2rem;
   display: flex;
   justify-content: flex-end;
@@ -21,7 +21,7 @@
 
 /* Navbar links */
 .nav-link {
-  color: var(--text-uiux-2, #cbc5d9);
+  color: var(--text-uiux-2, #e0e0e0);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -30,18 +30,18 @@
 }
 
 .nav-link.active {
-  color: var(--text-uiux-5, #bdf2ae);
+  color: var(--text-uiux-5, #a8ee95);
   font-weight: bold;
 }
 
 /* Hover effect for links */
 .nav-link:hover {
-  color: var(--text-uiux-5, #bdf2ae);
+  color: var(--text-uiux-5, #a8ee95);
 }
 
 /* Separator between links */
 .separator {
-  color: var(--text-uiux-2, #cbc5d9);
+  color: var(--text-uiux-2, #e0e0e0);
   margin: 0 0.5rem;
   font-size: 1rem;
 }

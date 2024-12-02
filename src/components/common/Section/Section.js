@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Section.css";
 
-const Section = ({ id, children }) => {
+const Section = ({ id, children, className = "", onVisibilityChange }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -10,7 +10,11 @@ const Section = ({ id, children }) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        const currentlyVisible = entry.isIntersecting;
+        setIsVisible(currentlyVisible);
+        if (onVisibilityChange) {
+          onVisibilityChange(id, currentlyVisible);
+        }
       },
       { threshold: 0.6 }
     );
@@ -24,13 +28,15 @@ const Section = ({ id, children }) => {
         observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [id, onVisibilityChange]);
 
   return (
     <div
       id={id}
       ref={sectionRef}
-      className={`snap-section ${isVisible ? "fade-in" : "fade-out"}`}
+      className={`snap-section ${
+        isVisible ? "fade-in" : "fade-out"
+      } ${className}`}
     >
       {children}
     </div>

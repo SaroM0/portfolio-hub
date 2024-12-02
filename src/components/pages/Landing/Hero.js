@@ -8,14 +8,7 @@ function Hero() {
   const delayBetweenWords = 2000;
 
   useEffect(() => {
-    const words = [
-      "Software Developer",
-      "Researcher",
-      "Front Developer",
-      "Back Developer",
-      "Engineer",
-      "Human",
-    ];
+    const words = ["Developer", "Researcher", "Engineer", "Human"];
 
     let wordIndex = 0;
     let charIndex = 0;

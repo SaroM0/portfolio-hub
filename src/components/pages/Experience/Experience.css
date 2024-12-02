@@ -1,0 +1,4 @@
+.experience-container {
+  min-height: 100vh; /* Ajusta según el contenido promedio */
+  height: 100vh; /* Permite que crezca según el contenido */
+}
