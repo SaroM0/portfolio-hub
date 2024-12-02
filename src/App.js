@@ -23,7 +23,7 @@ function App() {
         <Section id="education">
           <Education />
         </Section>
-        <Section id="experience" className="no-snap">
+        <Section id="experience" className="snap-section experience-section">
           <Experience />
         </Section>
         <Section id="projects">

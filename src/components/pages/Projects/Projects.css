@@ -1,0 +1,55 @@
+/* Contenedor principal de proyectos */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+/* Tarjetas de proyecto */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #252525;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Detalles del proyecto */
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: var(--text-uiux-2);
+}
+
+/* Botón de GitHub */
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-uiux-1);
+  color: var(--text-uiux-5); /* Contraste para el icono */
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: var(--bg-uiux-5);
+  color: var(--bg-uiux-4); /* Contraste en hover */
+  transform: scale(1.1);
+}

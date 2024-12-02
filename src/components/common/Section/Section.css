@@ -1,14 +1,23 @@
 /* Each section takes up one viewport height */
 .snap-section {
-  scroll-snap-align: start;
-  min-height: 100vh; /* Garantiza al menos una altura igual al viewport */
-  height: 100vh; /* Secciones normales ocupan un viewport completo */
+  scroll-snap-align: none;
+  scroll-snap-type: none;
+  height: 110vh; /* Secciones normales ocupan un viewport completo */
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.snap-section {
+  overflow: hidden; /* Evita que se corte el contenido */
+}
+
+.snap-section.experience-section {
+  height: 340vh; /* Altura personalizada para la sección Experience */
+  overflow: visible; /* Permite mostrar todo el contenido */
 }
 
 /* Fade-in animation */

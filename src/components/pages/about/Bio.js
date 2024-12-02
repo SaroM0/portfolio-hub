@@ -25,15 +25,6 @@ const Bio = () => {
           to explore and create makes me a highly creative person ready to
           embrace any new adventure with enthusiasm.
         </p>
-        <div className="download-cv">
-          <a
-            href="/cv.pdf"
-            download="Santiago_Rodriguez_CV.pdf"
-            className="download-button"
-          >
-            Check My CV
-          </a>
-        </div>
       </div>
     </div>
   );

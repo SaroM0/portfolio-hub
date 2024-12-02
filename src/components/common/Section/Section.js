@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Section.css";
 
-const Section = ({ id, children, className = "", onVisibilityChange }) => {
+const Section = ({ id, children, className = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -10,13 +10,9 @@ const Section = ({ id, children, className = "", onVisibilityChange }) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const currentlyVisible = entry.isIntersecting;
-        setIsVisible(currentlyVisible);
-        if (onVisibilityChange) {
-          onVisibilityChange(id, currentlyVisible);
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.6 }
+      { threshold: 0.25 }
     );
 
     if (currentRef) {
@@ -28,7 +24,7 @@ const Section = ({ id, children, className = "", onVisibilityChange }) => {
         observer.unobserve(currentRef);
       }
     };
-  }, [id, onVisibilityChange]);
+  }, []);
 
   return (
     <div

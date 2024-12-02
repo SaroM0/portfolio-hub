@@ -59,7 +59,3 @@ body {
 .border-uiux-5 {
   border-color: #a8ee95;
 }
-
-.no-snap-container {
-  scroll-snap-type: none; /* Deshabilita snapping */
-}
