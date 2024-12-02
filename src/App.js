@@ -10,27 +10,29 @@ import ScrollToTop from "./components/common/SrollToTop/ScrollToTop";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <ScrollToTop />
-      <div className="snap-container">
-        <Section id="landing">
-          <LandingPage />
-        </Section>
-        <Section id="about">
-          <About />
-        </Section>
-        <Section id="education">
-          <Education />
-        </Section>
-        <Section id="experience" className="snap-section experience-section">
-          <Experience />
-        </Section>
-        <Section id="projects">
-          <Projects />
-        </Section>
+    <>
+      <div className="app">
+        <Navbar />
+        <ScrollToTop />
+        <div className="snap-container">
+          <Section id="landing">
+            <LandingPage />
+          </Section>
+          <Section id="about">
+            <About />
+          </Section>
+          <Section id="education">
+            <Education />
+          </Section>
+          <Section id="experience" className="snap-section experience-section">
+            <Experience />
+          </Section>
+          <Section id="projects">
+            <Projects />
+          </Section>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

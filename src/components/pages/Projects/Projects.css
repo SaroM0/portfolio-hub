@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   gap: 20px; /* Espaciado entre las tarjetas */
+  margin: 30px;
+}
+
+.projects-title {
+  margin-left: 35px;
 }
 
 /* Tarjetas de proyecto */

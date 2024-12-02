@@ -5,10 +5,10 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "Full-Stack E-commerce Platform",
+    title: "AI-Driven Image Generation and Editing Platform",
     description:
-      "Scalable e-commerce app built with React, Node.js, and MongoDB.",
-    github: "https://github.com/yourusername/project1",
+      "An advanced application leveraging OpenAI's Function Calling and Ideogram API to enable intelligent image generation, specialized editing, and detailed descriptions. The platform features context-aware processing, automated mask generation, and seamless integration for scalable and efficient AI-driven image workflows.",
+    github: "https://github.com/SaroM0/image_generator",
   },
   {
     title: "Mobile Expense Tracker",
@@ -32,7 +32,7 @@ const projects = [
 function Projects() {
   return (
     <section id="projects" className="py-20 bg-uiux-4 text-uiux-2">
-      <h2>Projects</h2>
+      <h2 className="projects-title">Projects</h2>
       <div className="container mx-auto px-6">
         <div className="projects-container">
           {projects.map((project, index) => (

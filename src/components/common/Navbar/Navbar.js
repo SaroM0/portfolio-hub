@@ -18,17 +18,52 @@ function Navbar() {
   };
 
   useEffect(() => {
+    const container = document.querySelector(".snap-container");
+    if (!container) {
+      console.error("Snap container not found!");
+      return;
+    }
+
     const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
+      const sections = document.querySelectorAll("[id]");
       let currentSection = "";
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom > 0) {
+          currentSection = section.id;
+        }
+      });
+
+      console.log("Active Section:", currentSection);
+      setActiveSection(currentSection);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("[id]");
+
+      console.log("Sections found:", sections); // Para verificar que las secciones se detecten
+
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        console.log(`Section: ${section.id}, rect:`, rect); // Muestra los límites de cada sección
+
         if (rect.top <= 0 && rect.bottom >= 0) {
           currentSection = section.id;
         }
       });
 
+      console.log("Current Section:", currentSection); // Muestra la sección activa
       setActiveSection(currentSection);
     };
 
