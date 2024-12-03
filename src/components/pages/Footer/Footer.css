@@ -90,3 +90,7 @@
   color: #9f96d9; /* text-uiux-3 */
   font-size: 14px; /* Subtle font size for the position */
 }
+
+.availability-message h3 {
+  color: #a8ee95;
+}

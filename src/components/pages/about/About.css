@@ -23,7 +23,7 @@
 .bio-container {
   margin-bottom: 40px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: var(--bg-dark);
   color: var(--text-light);
 }
@@ -42,17 +42,9 @@
 .interests-container {
   margin-bottom: 40px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   background-color: var(--secondary-color);
   color: var(--bg-dark);
-}
-
-.skills-container h2,
-.interests-container h2 {
-  font-size: 1.6rem;
-  color: #9f96d9;
-  margin-bottom: 15px;
-  text-align: center;
 }
 
 .skills-content {
@@ -67,8 +59,8 @@
 
 .skills-content ul,
 .interests-container ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none; /* Elimina el estilo predeterminado */
+  padding-left: 20px; /* Añade espacio para los puntos personalizados */
 }
 
 .skills-content li,
@@ -76,6 +68,17 @@
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 8px;
+  position: relative; /* Permite posicionar los puntos */
+  padding-left: 20px; /* Espacio para los puntos */
+}
+
+.skills-content li::before,
+.interests-container li::before {
+  content: "•"; /* Punto personalizado */
+  color: #a8ee95; /* Color del punto */
+  position: absolute; /* Posiciona el punto antes del texto */
+  left: 0; /* Alinea el punto a la izquierda */
+  font-size: 1.2em; /* Ajusta el tamaño */
 }
 
 /* Responsividad para dispositivos pequeños */

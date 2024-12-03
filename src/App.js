@@ -11,6 +11,8 @@ import Section from "./components/common/Section/Section";
 import ScrollToTop from "./components/common/SrollToTop/ScrollToTop";
 import FloatingWindow from "./components/common/FloatingWindow/FloatingWindow";
 
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   const [isFloatingWindowVisible, setFloatingWindowVisible] = useState(true);
 

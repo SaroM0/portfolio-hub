@@ -65,7 +65,9 @@ const Footer = () => {
             to life. Contact me!
           </p>
         </div>
-        <h3>Contact</h3>
+        <div className="contact-message">
+          <h3>Contact</h3>
+        </div>
         <p>Email: s.rodriguezm2@uniandes.edu.co</p>
         <p>Phone: +57 321 286 0273</p>
         <div className="social-links">

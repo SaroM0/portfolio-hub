@@ -1,42 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import EducationItem from "./EducationItem";
 import CertificationItem from "./CertificationItem";
-import "./Education.css";
 
 import nvidiaLogo from "../../../assets/CertificationImages/nvidia.png";
 import gcpLogo from "../../../assets/CertificationImages/googleCloud.png";
 
+import "./Education.css";
+
+import PdfPreview from "../../common/PdfPreview/PdfPreview";
+
+import cvPdf from "../../../assets/PdfCV/Rodriguez_Santiago_CV.pdf";
+
 const Education = () => {
+  const [showPdf, setShowPdf] = useState(false);
+
+  const handleShowPdf = () => {
+    setShowPdf(true);
+  };
+
+  const handleClosePdf = () => {
+    setShowPdf(false);
+  };
+
   return (
     <div className="education-section">
       <h2>Education & Certifications</h2>
       <div className="education-certifications-container">
-        {/* Sección de Educación */}
         <div className="education-items">
           <EducationItem
             logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/220px-University_of_Los_Andes_logo.svg.png"
             institution="Universidad de Los Andes"
             degree="Bachelor's degree in Computer Science"
-            period="Aug 2021 - 2025"
+            period=""
             skills={[]}
           />
           <EducationItem
             logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/220px-University_of_Los_Andes_logo.svg.png"
             institution="Universidad de Los Andes"
             degree="Advanced coursework in Electronic Engineering"
-            period="2021 - 2025"
+            period=""
             skills={[]}
           />
           <EducationItem
             logo="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Logo_del_ITESM.svg/600px-Logo_del_ITESM.svg.png"
             institution="Tecnológico de Monterrey"
             degree="Exchange Program in Data Analytics and Artificial Intelligence"
-            period="Jul 2024 - Dec 2024"
+            period=""
             skills={[]}
           />
         </div>
 
-        {/* Sección de Certificaciones */}
         <div className="certifications-items">
           <CertificationItem
             logo={nvidiaLogo}
@@ -68,6 +81,13 @@ const Education = () => {
           />
         </div>
       </div>
+      <div className="view-cv-button-container">
+        <button onClick={handleShowPdf} className="view-cv-button">
+          View My Full CV
+        </button>
+      </div>
+
+      {showPdf && <PdfPreview pdfUrl={cvPdf} onClose={handleClosePdf} />}
     </div>
   );
 };

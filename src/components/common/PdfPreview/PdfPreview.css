@@ -1,0 +1,40 @@
+.pdf-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf-preview-container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-preview-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #a8ee95;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #121212;
+  transition: background-color 0.3s ease;
+}
+
+.close-preview-button:hover {
+  background-color: #9f96d9;
+}

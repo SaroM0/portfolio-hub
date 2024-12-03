@@ -12,7 +12,7 @@
   flex-direction: column;
   gap: 12px;
   background-color: var(--bg-light);
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px; /* Añade padding interno */
 }
@@ -23,7 +23,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   background-color: var(--bg-light);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px; /* Añade padding interno */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -63,4 +63,30 @@
 .education-details p,
 .certification-details p {
   margin: 5px 0;
+}
+
+.view-cv-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg-dark); /* Color del texto */
+  background-color: #a8ee95; /* Fondo verde */
+  color: #252525;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-cv-button:hover {
+  background-color: #9f96d9; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.05); /* Agrega un efecto de zoom */
+  color: #e0e0e0;
 }

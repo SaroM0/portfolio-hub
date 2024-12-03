@@ -1,13 +1,24 @@
+/* Floating Window */
 .floating-window {
   position: fixed;
   top: 80px;
-  right: 20px;
+  right: 0px;
   width: 320px;
   border-radius: 12px;
   z-index: 1000;
   background-color: transparent;
+  transition: transform 0.3s ease-in-out; /* Suaviza el movimiento */
 }
 
+.floating-window.open {
+  transform: translateX(-20px); /* Posición visible con margen derecho */
+}
+
+.floating-window.closed {
+  transform: translateX(0px); /* Desplazado, dejando un borde visible */
+}
+
+/* Close Button */
 .close-button {
   position: absolute;
   right: 0px;
@@ -20,5 +31,5 @@
 }
 
 .close-button:hover {
-  color: #a8ee95; /* Cambia el color de la "X" a rojo al pasar el cursor */
+  color: #a8ee95; /* Cambia el color de la "X" a verde claro al pasar el cursor */
 }
