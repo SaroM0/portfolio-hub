@@ -22,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <div className="app">
         <Navbar />
         <ScrollToTop />
