@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // Opcional: carga una versión reducida para optimizar el tamaño del bundle
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticleComponent = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine); // Carga la versión slim de tsParticles
+      await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/common/Navbar/Navbar";
 import LandingPage from "./components/pages/Landing/LandingPage";
 import About from "./components/pages/about/About";
@@ -7,13 +7,26 @@ import Experience from "./components/pages/Experience/Experience";
 import Projects from "./components/pages/Projects/Projects";
 import Section from "./components/common/Section/Section";
 import ScrollToTop from "./components/common/SrollToTop/ScrollToTop";
+import FloatingWindow from "./components/common/FloatingWindow/FloatingWindow";
 
 function App() {
+  const [isFloatingWindowVisible, setFloatingWindowVisible] = useState(true);
+
+  const handleClose = () => {
+    setFloatingWindowVisible(false);
+  };
+
   return (
     <>
       <div className="app">
         <Navbar />
         <ScrollToTop />
+        {isFloatingWindowVisible && (
+          <FloatingWindow
+            playlistId="0PInCJOxBsO832eLJ7UdPY"
+            onClose={handleClose}
+          />
+        )}
         <div className="snap-container">
           <Section id="landing">
             <LandingPage />
