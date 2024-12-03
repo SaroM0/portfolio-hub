@@ -50,20 +50,20 @@ function Navbar() {
     const handleScroll = () => {
       const sections = document.querySelectorAll("[id]");
 
-      console.log("Sections found:", sections); // Para verificar que las secciones se detecten
+      console.log("Sections found:", sections);
 
       let currentSection = "";
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        console.log(`Section: ${section.id}, rect:`, rect); // Muestra los límites de cada sección
+        console.log(`Section: ${section.id}, rect:`, rect);
 
         if (rect.top <= 0 && rect.bottom >= 0) {
           currentSection = section.id;
         }
       });
 
-      console.log("Current Section:", currentSection); // Muestra la sección activa
+      console.log("Current Section:", currentSection);
       setActiveSection(currentSection);
     };
 

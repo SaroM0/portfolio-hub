@@ -1,4 +1,3 @@
-// Testimonial.js
 import React from "react";
 
 const Testimonial = ({ photo, name, position, company, comment }) => {
