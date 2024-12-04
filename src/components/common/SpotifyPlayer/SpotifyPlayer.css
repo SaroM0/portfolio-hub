@@ -1,0 +1,5 @@
+.spotify-player {
+  width: 100%;
+  height: auto; /* Asegura que se ajuste al tamaño disponible */
+  max-height: 100%; /* Evita desbordamiento */
+}

@@ -57,17 +57,32 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-uiux-4 text-uiux-2">
-      <div className="footer-left">
-        <div className="availability-message">
-          <h3>Available for select freelance opportunities</h3>
-          <p>
-            Have an exciting project idea? I'm eager to collaborate and bring it
-            to life. Contact me!
-          </p>
-        </div>
-        <div className="contact-message">
-          <h3>Contact</h3>
-        </div>
+      <div className="footer-section availability-message">
+        <h3>Available for select freelance opportunities</h3>
+        <p>
+          Have an exciting project idea? I'm eager to collaborate and bring it
+          to life. Contact me!
+        </p>
+      </div>
+      <div className="footer-section footer-right">
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          keyBoardControl={true}
+          showDots={false}
+          arrows={false}
+          containerClass="carousel-container"
+          itemClass="carousel-item"
+        >
+          {testimonials.map((testimonial, index) => (
+            <Testimonial key={index} {...testimonial} />
+          ))}
+        </Carousel>
+      </div>
+      <div className="footer-section contact-info">
+        <h3>Contact</h3>
         <p>Email: s.rodriguezm2@uniandes.edu.co</p>
         <p>Phone: +57 321 286 0273</p>
         <div className="social-links">
@@ -115,23 +130,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
         </div>
-      </div>
-      <div className="footer-right">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          showDots={false}
-          arrows={false}
-          containerClass="carousel-container"
-          itemClass="carousel-item"
-        >
-          {testimonials.map((testimonial, index) => (
-            <Testimonial key={index} {...testimonial} />
-          ))}
-        </Carousel>
       </div>
     </footer>
   );

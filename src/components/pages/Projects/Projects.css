@@ -1,7 +1,7 @@
 /* Contenedor principal de proyectos */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
   gap: 20px; /* Espaciado entre las tarjetas */
   margin: 30px;
 }
@@ -57,4 +57,55 @@
   background-color: var(--bg-uiux-5);
   color: var(--bg-uiux-4); /* Contraste en hover */
   transform: scale(1.1);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 15px; /* Reduce el espaciado entre las tarjetas */
+    margin: 20px; /* Reduce el margen general */
+  }
+
+  .projects-title {
+    margin-left: 20px; /* Ajusta el margen del título */
+    text-align: center; /* Centra el título */
+  }
+
+  .project-item {
+    padding: 10px; /* Reduce el padding interno */
+    gap: 10px; /* Reduce el espacio entre elementos */
+  }
+
+  .project-details p {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+  }
+
+  .github-link {
+    width: 35px; /* Botón más pequeño */
+    height: 35px;
+    font-size: 1.2rem; /* Reduce el tamaño del icono */
+  }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .projects-container {
+    margin: 10px; /* Márgenes más pequeños */
+    gap: 10px; /* Espaciado reducido */
+  }
+
+  .project-item {
+    padding: 8px; /* Ajusta aún más el padding */
+  }
+
+  .project-details p {
+    font-size: 0.8rem; /* Texto más compacto */
+  }
+
+  .github-link {
+    width: 30px; /* Botón más compacto */
+    height: 30px;
+    font-size: 1rem;
+  }
 }

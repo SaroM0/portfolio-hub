@@ -1,7 +1,7 @@
 /* Contenedor principal para educación y certificaciones */
 .education-certifications-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales para pantallas grandes */
   gap: 20px; /* Espaciado entre las columnas */
   margin: 0 10px; /* Reduce los márgenes laterales */
 }
@@ -20,18 +20,15 @@
 /* Sección de Certificaciones */
 .certifications-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Ajusta columnas automáticamente */
   gap: 12px;
   background-color: var(--bg-light);
   border-radius: 12px;
   padding: 10px; /* Añade padding interno */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.certifications-items h3 {
-  grid-column: 1 / -1; /* Hace que el título ocupe todo el ancho */
-  text-align: center;
-  margin-bottom: 15px;
 }
 
 /* Tarjetas de Educación y Certificación */
@@ -89,4 +86,49 @@
   background-color: #9f96d9; /* Cambia el color de fondo al pasar el cursor */
   transform: scale(1.05); /* Agrega un efecto de zoom */
   color: #e0e0e0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .education-certifications-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 15px; /* Espaciado reducido */
+  }
+
+  .education-items,
+  .certifications-items {
+    padding: 15px; /* Ajuste de padding interno */
+    gap: 10px; /* Reduce el espacio entre los ítems */
+  }
+
+  .certifications-items {
+    grid-template-columns: 1fr; /* Las certificaciones también en una columna */
+  }
+
+  .view-cv-button-container {
+    margin-top: 20px; /* Ajusta el espaciado */
+  }
+
+  .view-cv-button {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    padding: 8px 16px; /* Ajusta el tamaño del botón */
+  }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .education-certifications-container {
+    margin: 0; /* Elimina márgenes laterales */
+    gap: 10px; /* Espaciado reducido */
+  }
+
+  .education-items,
+  .certifications-items {
+    padding: 10px; /* Reduce el padding interno */
+  }
+
+  .view-cv-button {
+    font-size: 0.8rem; /* Tamaño más pequeño */
+    padding: 6px 12px; /* Botón más compacto */
+  }
 }

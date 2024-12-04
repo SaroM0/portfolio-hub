@@ -12,6 +12,7 @@ const SpotifyPlayer = ({ playlistId }) => {
         allowTransparency="true"
         allow="encrypted-media"
         title="Spotify Playlist"
+        className="spotify-player"
       ></iframe>
     </div>
   );

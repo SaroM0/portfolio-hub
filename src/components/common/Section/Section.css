@@ -1,4 +1,4 @@
-/* Each section takes up one viewport height */
+/* General styling for Section */
 .snap-section {
   scroll-snap-align: none;
   scroll-snap-type: none;
@@ -20,7 +20,57 @@
   overflow: visible; /* Permite mostrar todo el contenido */
 }
 
-/* Fade-in animation */
+/* Responsividad para pantallas medianas */
+@media (max-width: 1024px) {
+  .snap-section {
+    height: 100vh; /* Ajusta a un viewport completo */
+    padding: 1rem; /* Añade padding interno */
+  }
+
+  .snap-section.experience-section {
+    height: 250vh; /* Reduce la altura para pantallas medianas */
+    padding: 1rem; /* Ajusta el contenido */
+  }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .snap-section {
+    height: 90vh; /* Reduce un poco la altura */
+    padding: 0.5rem; /* Ajusta el espacio interno */
+  }
+
+  .snap-section.experience-section {
+    height: 200vh; /* Reduce más la altura para pantallas pequeñas */
+  }
+}
+
+/* Responsividad para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .snap-section {
+    height: auto; /* Ajusta automáticamente según el contenido */
+    min-height: 80vh; /* Asegura un mínimo de altura */
+    padding: 0.5rem; /* Espaciado más pequeño */
+  }
+
+  .snap-section.experience-section {
+    min-height: 395vh; /* Asegura un mínimo de altura */
+    padding: 0;
+  }
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Keyframes for fade-in animation */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -30,16 +80,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Fade-in effect */
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Fade-out effect */
-.fade-out {
-  opacity: 0;
-  transform: translateY(20px);
 }

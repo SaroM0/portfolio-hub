@@ -1,21 +1,17 @@
-/* Footer.css */
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
   padding: 20px;
   background-color: #262626; /* bg-uiux-4 */
   color: #e0e0e0; /* text-uiux-2 */
 }
 
-.footer-left {
+.footer-left,
+.footer-right,
+.footer-section {
   flex: 1;
-}
-
-.footer-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  margin: 10px; /* Espaciado uniforme entre secciones */
 }
 
 .social-links a {
@@ -30,14 +26,18 @@
 }
 
 .carousel-container {
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  max-width: 800px; /* Limita el ancho máximo del carrusel */
   height: 300px;
   overflow: hidden;
+  margin: 0 auto; /* Centra el carrusel horizontalmente */
 }
 
 .carousel-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .testimonial {
@@ -93,4 +93,52 @@
 
 .availability-message h3 {
   color: #a8ee95;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Cambia a diseño vertical */
+  }
+
+  .availability-message {
+    order: 1; /* Aparece primero */
+  }
+
+  .footer-right {
+    order: 2; /* Aparece segundo */
+  }
+
+  .contact-info {
+    order: 3; /* Aparece tercero */
+  }
+
+  .footer-section {
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 20px 0; /* Espaciado vertical entre secciones */
+  }
+
+  .social-links a {
+    margin-right: 15px; /* Espaciado más amplio en pantallas pequeñas */
+  }
+
+  .carousel-container {
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .testimonial {
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  overflow: hidden;
+  width: 100%; /* Asegura que no desborde el contenedor */
+  padding: 20px;
+  box-sizing: border-box; /* Considera el padding en el ancho total */
 }
