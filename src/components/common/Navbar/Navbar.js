@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Navbar.css";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navRef = useRef(null); // Referencia al menú desplegable
+
   const handleScrollTo = (id) => {
     const section = document.querySelector(id);
     const container = document.querySelector(".snap-container");
@@ -15,7 +19,26 @@ function Navbar() {
         behavior: "smooth",
       });
     }
+    setIsMenuOpen(false); // Cerrar menú después de hacer clic en un enlace
   };
+
+  const handleClickOutside = (event) => {
+    if (navRef.current && !navRef.current.contains(event.target)) {
+      setIsMenuOpen(false); // Cierra el menú si se hace clic fuera
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const container = document.querySelector(".snap-container");
@@ -35,7 +58,6 @@ function Navbar() {
         }
       });
 
-      console.log("Active Section:", currentSection);
       setActiveSection(currentSection);
     };
 
@@ -46,83 +68,65 @@ function Navbar() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("[id]");
-
-      console.log("Sections found:", sections);
-
-      let currentSection = "";
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        console.log(`Section: ${section.id}, rect:`, rect);
-
-        if (rect.top <= 0 && rect.bottom >= 0) {
-          currentSection = section.id;
-        }
-      });
-
-      console.log("Current Section:", currentSection);
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <div className="container">
-        <a
-          href="#about"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollTo("#about");
-          }}
-          className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+        {/* Botón tipo hamburguesa para móviles */}
+        <button
+          className="hamburger-menu"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          About Me
-        </a>
-        <span className="separator">|</span>
-        <a
-          href="#education"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollTo("#education");
-          }}
-          className={`nav-link ${
-            activeSection === "education" ? "active" : ""
-          }`}
-        >
-          Education & Certifications
-        </a>
-        <span className="separator">|</span>
-        <a
-          href="#experience"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollTo("#experience");
-          }}
-          className={`nav-link ${
-            activeSection === "experience" ? "active" : ""
-          }`}
-        >
-          Experience
-        </a>
-        <span className="separator">|</span>
-        <a
-          href="#projects"
-          onClick={(e) => {
-            e.preventDefault();
-            handleScrollTo("#projects");
-          }}
-          className={`nav-link ${activeSection === "projects" ? "active" : ""}`}
-        >
-          Projects
-        </a>
+          ☰
+        </button>
+
+        <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+          <a
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollTo("#about");
+            }}
+            className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+          >
+            About Me
+          </a>
+          <a
+            href="#education"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollTo("#education");
+            }}
+            className={`nav-link ${
+              activeSection === "education" ? "active" : ""
+            }`}
+          >
+            Education & Certifications
+          </a>
+          <a
+            href="#experience"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollTo("#experience");
+            }}
+            className={`nav-link ${
+              activeSection === "experience" ? "active" : ""
+            }`}
+          >
+            Experience
+          </a>
+          <a
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScrollTo("#projects");
+            }}
+            className={`nav-link ${
+              activeSection === "projects" ? "active" : ""
+            }`}
+          >
+            Projects
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -8,6 +8,48 @@
   color: var(--text-uiux-2, #e0e0e0);
 }
 
+@media (max-width: 768px) {
+  .hero-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .static-text.large {
+    font-size: 1.5rem; /* Texto más grande */
+    color: var(--text-uiux-5, #a8ee95);
+    margin-bottom: 1rem;
+    max-width: 35%;
+  }
+
+  .animated-text.small {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .passionate-text.small {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--text-uiux-2, #e0e0e0);
+    margin: 0.5rem 0;
+  }
+
+  .dynamic-text.small {
+    font-size: 1.8rem;
+    color: var(--text-uiux-3, #9f96d9);
+  }
+
+  .subtext.small {
+    font-size: 1rem;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    line-height: 1.5;
+    max-width: 85%;
+    text-align: justify;
+    margin: 1rem auto;
+  }
+}
+
 #tsparticles {
   position: fixed;
   top: 0;
@@ -34,6 +76,7 @@
 
 .dynamic-text {
   color: var(--text-uiux-3, #9f96d9);
+  display: inline-block;
 }
 
 /* Blinking cursor styling */
@@ -149,4 +192,29 @@
 .social-icon:hover {
   color: var(--text-uiux-5, #a8ee95);
   transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    flex-direction: row;
+    position: static;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    font-size: 1.2rem;
+  }
+
+  .social-media {
+    gap: 0.5rem;
+  }
 }

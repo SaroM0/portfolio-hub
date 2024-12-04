@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 
 function Hero() {
   const [currentWord, setCurrentWord] = useState("");
-  const staticPart = "My name is Santiago, a passionate ";
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const staticPartFull = "My name is Santiago, a passionate ";
+  const staticPart = "My name is Santiago,";
+  const passionatePart = "a passionate ";
   const typingSpeed = 100;
   const erasingSpeed = 50;
   const delayBetweenWords = 2000;
@@ -41,19 +44,47 @@ function Hero() {
     return () => clearTimeout(timeout);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth <= 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="hero-container">
-      <p className="static-text">Hi there!</p>
-      <h1 className="animated-text">
-        {staticPart}
-        <span className="dynamic-text">{currentWord}</span>
-        <span className="blinking-cursor"></span>
-      </h1>
-      <p className="subtext">
-        Driven by a passion for artificial intelligence, programming, and
-        lifelong learning, I strive to innovate, enhance, and contribute to the
-        world through groundbreaking AI applications and research.
-      </p>
+      {isSmallScreen ? (
+        <>
+          <p className="static-text large">Hi there!</p>
+          <h1 className="animated-text small">{staticPart}</h1>
+          <h2 className="passionate-text small">
+            {passionatePart}
+
+            <span className="dynamic-text small">{currentWord}</span>
+          </h2>
+
+          <p className="subtext small">
+            Driven by a passion for artificial intelligence, programming, and
+            lifelong learning, I strive to innovate, enhance, and contribute to
+            the world through groundbreaking AI applications and research.
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="static-text">Hi there!</p>
+          <h1 className="animated-text">
+            {staticPartFull}
+            <span className="dynamic-text">{currentWord}</span>
+            <span className="blinking-cursor"></span>
+          </h1>
+          <p className="subtext">
+            Driven by a passion for artificial intelligence, programming, and
+            lifelong learning, I strive to innovate, enhance, and contribute to
+            the world through groundbreaking AI applications and research.
+          </p>
+        </>
+      )}
     </div>
   );
 }

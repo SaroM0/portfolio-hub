@@ -2,31 +2,40 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 95%;
+  width: 100%;
   z-index: 1000;
   background-color: var(--bg-uiux-4, #121212);
+  opacity: 0.7;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
-/* Navbar content container */
-.container {
+/* Navbar links container */
+.nav-links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  max-width: 11200px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Navbar links */
+/* Botón hamburguesa */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-uiux-2, #e0e0e0);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .nav-link {
   color: var(--text-uiux-2, #e0e0e0);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 .nav-link.active {
@@ -34,37 +43,50 @@
   font-weight: bold;
 }
 
-/* Hover effect for links */
 .nav-link:hover {
   color: var(--text-uiux-5, #a8ee95);
 }
 
-/* Separator between links */
-.separator {
-  color: var(--text-uiux-2, #e0e0e0);
-  margin: 0 0.5rem;
-  font-size: 1rem;
-}
-
-/* Animation: Slide down */
-@keyframes slide-down {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 1rem 0;
+  .hamburger-menu {
+    display: block;
+    margin: 50%;
   }
 
-  .nav-link,
-  .separator {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-uiux-4, #121212);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-link {
     margin: 0.5rem 0;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background-color: var(--text-uiux-5, #1a1a1a);
   }
 }
