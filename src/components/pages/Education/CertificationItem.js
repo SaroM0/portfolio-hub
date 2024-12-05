@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const CertificationItem = ({
   logo,
@@ -7,6 +8,8 @@ const CertificationItem = ({
   issueDate,
   credentialUrl,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="certification-item">
       <div className="certification-header">
@@ -14,14 +17,20 @@ const CertificationItem = ({
         <h4>{title}</h4>
       </div>
       <div className="certification-details">
-        <p>Issued by: {issuer}</p>
-        <p>Issue date: {issueDate}</p>
+        <p>
+          {t("certifications.issuedBy")}: {issuer}
+        </p>
+        <p>
+          {t("certifications.issueDate")}: {issueDate}
+        </p>
         <a
           href={credentialUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="credential-link"
-        ></a>
+        >
+          {t("certifications.viewCredential")}
+        </a>
       </div>
     </div>
   );

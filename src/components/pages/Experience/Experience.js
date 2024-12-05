@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -10,97 +11,83 @@ import sinfoniaLogo from "../../../assets/ExperienceImages/sinfonia.jpeg";
 import electronicaLogo from "../../../assets/ExperienceImages/Electronic.jpeg";
 import oasisLogo from "../../../assets/ExperienceImages/Oasis.jpeg";
 
-const experiences = [
-  {
-    date: "May 2024 - Present",
-    title: "Software Developer",
-    company: "Straico",
-    location: "Cheyenne, Wyoming, United States (Remote)",
-    description: [
-      "API Development: Designing and implementing APIs to facilitate seamless communication between AI models and web applications.",
-      "Front-End Development: Building user-friendly interfaces using React, ensuring an intuitive user experience.",
-      "Back-End Development: Developing robust server-side logic to support AI functionalities and data processing.",
-      "AI Integration: Implementing large language models (LLMs), natural language processing (NLP), retrieval-augmented generation (RAG), and embeddings to enhance application capabilities.",
-      "Microservices Deployment: Deploying microservices architectures to improve scalability and maintainability.",
-    ],
-    icon: straicoLogo,
-    iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
-  },
-  {
-    date: "Apr 2023 - Present",
-    title: "Manipulation Research Head",
-    company: "SinfonIA Uniandes",
-    location: "Bogotá, Capital District, Colombia (On-site)",
-    description: [
-      "Leading a team of talented engineering students to enable Pepper robots to interact effectively with their surroundings.",
-      "Leveraging tools such as ROS and MoveIt to develop cutting-edge solutions that enhance robotic functionality and performance in dynamic environments.",
-    ],
-    icon: sinfoniaLogo,
-    iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
-  },
-  {
-    date: "Feb 2024 - Jun 2024",
-    title: "XR Application Developer",
-    company: "Oasis",
-    location: "Bogotá, Capital District, Colombia",
-    description: [],
-    icon: oasisLogo,
-    iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
-  },
-  {
-    date: "Aug 2022 - Dec 2023",
-    title: "Teaching Assistant",
-    company: "Universidad de Los Andes",
-    location: "Bogotá, Capital District, Colombia (On-site)",
-    description: [
-      "Assisted course instructors in workshops, labs, and classes by guiding students, addressing inquiries, reviewing assignments, managing evaluations, transcribing notes, and coordinating materials.",
-      "Supported projects aligned with the Sustainable Development Goals (SDGs), assisting students in problem definition, methodology, and development of sustainable projects.",
-    ],
-    icon: electronicaLogo,
-    iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
-  },
-  {
-    date: "Jun 2023 - Jun 2023",
-    title: "Teaching Assistant",
-    company: "Universidad de Los Andes",
-    location: "Bogotá, Capital District, Colombia (On-site)",
-    description: [
-      "Supported course instructors in workshops, labs, and classes.",
-      "Facilitated coordination of equipment and led installation and maintenance of software tools, including Ubuntu, ROS, PyTorch, Nvidia CUDA, TensorFlow, inverse kinematics libraries, CNN, and MoveIt.",
-    ],
-    icon: electronicaLogo,
-    iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
-  },
-  {
-    date: "Jan 2022 - Jun 2022",
-    title: "Teaching Assistant",
-    company: "Universidad de Los Andes",
-    location: "Bogotá, Capital District, Colombia (On-site)",
-    description: [
-      "Assisted course instructors in workshops, labs, and classes by guiding students, addressing inquiries, reviewing assignments, managing evaluations, transcribing notes, and coordinating materials.",
-      "Collaborated with diverse professors across various fields, engaging in technologies encompassing IoT comprehensively.",
-    ],
-    icon: electronicaLogo,
-    iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
-  },
-  {
-    date: "Jan 2022 - Jun 2022",
-    title: "Frontend Developer",
-    company: "Universidad de Los Andes",
-    location: "Bogotá, Capital District, Colombia",
-    description: [
-      "Oversaw management and updates of the department’s website.",
-      "Responsibilities encompassed content publication, HTML, CSS, and JavaScript development for content implementation, ensuring website functionality and maintenance, and enhancing accessibility and user usability.",
-    ],
-    icon: electronicaLogo,
-    iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
-  },
-];
+const Experience = () => {
+  const { t } = useTranslation();
 
-function Experience() {
+  // Mover `experiences` dentro del cuerpo del componente
+  const experiences = [
+    {
+      date: t("experience.straico.date"),
+      title: t("experience.straico.title"),
+      company: t("experience.straico.company"),
+      location: t("experience.straico.location"),
+      description: t("experience.straico.description", { returnObjects: true }),
+      icon: straicoLogo,
+      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+    },
+    {
+      date: t("experience.sinfonia.date"),
+      title: t("experience.sinfonia.title"),
+      company: t("experience.sinfonia.company"),
+      location: t("experience.sinfonia.location"),
+      description: t("experience.sinfonia.description", {
+        returnObjects: true,
+      }),
+      icon: sinfoniaLogo,
+      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+    },
+    {
+      date: t("experience.oasis.date"),
+      title: t("experience.oasis.title"),
+      company: t("experience.oasis.company"),
+      location: t("experience.oasis.location"),
+      description: t("experience.oasis.description", { returnObjects: true }),
+      icon: oasisLogo,
+      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+    },
+    {
+      date: t("experience.ta1.date"),
+      title: t("experience.ta1.title"),
+      company: t("experience.ta1.company"),
+      location: t("experience.ta1.location"),
+      description: t("experience.ta1.description", { returnObjects: true }),
+      icon: electronicaLogo,
+      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+    },
+    {
+      date: t("experience.ta2.date"),
+      title: t("experience.ta2.title"),
+      company: t("experience.ta2.company"),
+      location: t("experience.ta2.location"),
+      description: t("experience.ta2.description", { returnObjects: true }),
+      icon: electronicaLogo,
+      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+    },
+    {
+      date: t("experience.ta3.date"),
+      title: t("experience.ta3.title"),
+      company: t("experience.ta3.company"),
+      location: t("experience.ta3.location"),
+      description: t("experience.ta3.description", { returnObjects: true }),
+      icon: electronicaLogo,
+      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+    },
+    {
+      date: t("experience.frontend.date"),
+      title: t("experience.frontend.title"),
+      company: t("experience.frontend.company"),
+      location: t("experience.frontend.location"),
+      description: t("experience.frontend.description", {
+        returnObjects: true,
+      }),
+      icon: electronicaLogo,
+      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+    },
+  ];
+
   return (
     <section id="experience" className="py-20 bg-uiux-4 text-uiux-2">
-      <h2 className="font-bold">Experience</h2>
+      <h2 className="font-bold">{t("experience.title")}</h2>
 
       <div className="container mx-auto px-4">
         <VerticalTimeline>
@@ -138,6 +125,6 @@ function Experience() {
       </div>
     </section>
   );
-}
+};
 
 export default Experience;

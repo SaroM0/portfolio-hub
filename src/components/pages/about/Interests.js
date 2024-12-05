@@ -1,21 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Interests = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="interests-container">
-      <h2>Interests</h2>
+      <h2>{t("interests.title")}</h2>
       <ul>
-        <li>
-          Exploring and developing innovative projects with real-world impact
-        </li>
-        <li>
-          Continuous learning: embracing new skills, ideas, and technologies
-        </li>
-        <li>Collaborating with diverse teams to create meaningful solutions</li>
-        <li>
-          Challenging myself: learning from mistakes and growing through
-          feedback
-        </li>
+        <li>{t("interests.exploringProjects")}</li>
+        <li>{t("interests.continuousLearning")}</li>
+        <li>{t("interests.collaboratingTeams")}</li>
+        <li>{t("interests.challengingMyself")}</li>
       </ul>
     </div>
   );

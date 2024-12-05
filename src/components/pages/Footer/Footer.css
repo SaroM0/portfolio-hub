@@ -142,3 +142,22 @@
   padding: 20px;
   box-sizing: border-box; /* Considera el padding en el ancho total */
 }
+
+.copyright-section {
+  text-align: center;
+  margin-top: 20px; /* Espaciado superior para separar de otros elementos */
+}
+
+.copyright-section p {
+  margin: 5px 0; /* Espaciado uniforme entre líneas */
+  color: #e0e0e0; /* Asegura consistencia con el tema */
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-xs {
+  font-size: 12px;
+  color: #999999; /* Color más tenue para © */
+}

@@ -90,3 +90,27 @@
     background-color: var(--text-uiux-5, #1a1a1a);
   }
 }
+
+.language-buttons {
+  position: absolute;
+  right: 10vh; /* Margen derecho */
+  top: 2vh; /* Margen superior */
+  display: flex;
+  gap: 10px; /* Espaciado entre botones */
+}
+
+.language-buttons button {
+  background-color: #fff;
+  color: #262626;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.language-buttons button:hover {
+  background-color: #8e58da; /* Color de hover */
+  color: #fff;
+}

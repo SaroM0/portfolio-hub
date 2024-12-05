@@ -1,11 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const navRef = useRef(null); // Referencia al menú desplegable
+  const { t, i18n } = useTranslation();
+
+  // Alternar idioma entre "en" y "es"
+  const toggleLanguage = () => {
+    const currentLang = i18n.language;
+    const nextLang = currentLang === "en" ? "es" : "en";
+    i18n.changeLanguage(nextLang);
+  };
 
   const handleScrollTo = (id) => {
     const section = document.querySelector(id);
@@ -21,52 +29,6 @@ function Navbar() {
     }
     setIsMenuOpen(false); // Cerrar menú después de hacer clic en un enlace
   };
-
-  const handleClickOutside = (event) => {
-    if (navRef.current && !navRef.current.contains(event.target)) {
-      setIsMenuOpen(false); // Cierra el menú si se hace clic fuera
-    }
-  };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    const container = document.querySelector(".snap-container");
-    if (!container) {
-      console.error("Snap container not found!");
-      return;
-    }
-
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("[id]");
-      let currentSection = "";
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 0 && rect.bottom > 0) {
-          currentSection = section.id;
-        }
-      });
-
-      setActiveSection(currentSection);
-    };
-
-    container.addEventListener("scroll", handleScroll);
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <nav className="navbar" ref={navRef}>
@@ -88,7 +50,7 @@ function Navbar() {
             }}
             className={`nav-link ${activeSection === "about" ? "active" : ""}`}
           >
-            About Me
+            {t("navbar.about")}
           </a>
           <a
             href="#education"
@@ -100,7 +62,7 @@ function Navbar() {
               activeSection === "education" ? "active" : ""
             }`}
           >
-            Education & Certifications
+            {t("navbar.education")}
           </a>
           <a
             href="#experience"
@@ -112,7 +74,7 @@ function Navbar() {
               activeSection === "experience" ? "active" : ""
             }`}
           >
-            Experience
+            {t("navbar.experience")}
           </a>
           <a
             href="#projects"
@@ -124,8 +86,15 @@ function Navbar() {
               activeSection === "projects" ? "active" : ""
             }`}
           >
-            Projects
+            {t("navbar.projects")}
           </a>
+        </div>
+
+        {/* Botón único para cambiar idioma */}
+        <div className="language-buttons">
+          <button onClick={toggleLanguage}>
+            {i18n.language === "en" ? "ES" : "EN"}
+          </button>
         </div>
       </div>
     </nav>
