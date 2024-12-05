@@ -9,7 +9,7 @@ import "./Education.css";
 
 import PdfPreview from "../../common/PdfPreview/PdfPreview";
 
-import cvPdf from "../../../assets/PdfCV/Rodriguez_Santiago_CV.pdf";
+const cvPdf = "/Rodriguez_Santiago_CV.pdf";
 
 const Education = () => {
   const [showPdf, setShowPdf] = useState(false);

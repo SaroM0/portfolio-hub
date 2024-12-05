@@ -2,39 +2,78 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    18,
+    18,
+    18,
+    0.9
+  ); /* Matches the dark theme background with transparency */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .pdf-preview-container {
+  background: #121212; /* Dark theme background */
+  border: 2px solid #8e58da; /* Accent border from the theme */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
   position: relative;
-  width: 80%;
-  height: 80%;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close-preview-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #a8ee95;
+  background: #8e58da; /* Accent color */
+  color: #e0e0e0; /* Light text for contrast */
   border: none;
-  border-radius: 50%;
+  border-radius: 4px;
+  padding: 5px 10px;
   cursor: pointer;
-  color: #121212;
-  transition: background-color 0.3s ease;
+  z-index: 1001;
+  transition: background 0.3s;
 }
 
 .close-preview-button:hover {
-  background-color: #9f96d9;
+  background: #9f96d9; /* Lighter accent for hover state */
+}
+
+.pdf-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.navigation-button {
+  padding: 5px 10px;
+  background: #8e58da; /* Accent button color */
+  color: #e0e0e0; /* Light text for contrast */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navigation-button:disabled {
+  background: #9f96d9; /* Muted accent color for disabled state */
+  cursor: not-allowed;
+}
+
+.navigation-button:hover:not(:disabled) {
+  background: #a8ee95; /* Green accent for hover state */
+}
+
+.pdf-navigation span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e0e0e0; /* Light text color for visibility */
 }
