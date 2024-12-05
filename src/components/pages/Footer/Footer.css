@@ -1,24 +1,24 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+  flex-wrap: wrap;
   padding: 20px;
-  background-color: #262626; /* bg-uiux-4 */
-  color: #e0e0e0; /* text-uiux-2 */
+  background-color: #262626;
+  color: #e0e0e0;
 }
 
 .footer-left,
 .footer-right,
 .footer-section {
   flex: 1;
-  margin: 10px; /* Espaciado uniforme entre secciones */
+  margin: 10px;
 }
 
 .social-links a {
   display: inline-block;
   margin-right: 10px;
   text-decoration: none;
-  color: #e0e0e0; /* text-uiux-2 */
+  color: #e0e0e0;
 }
 
 .social-links a:hover {
@@ -26,11 +26,11 @@
 }
 
 .carousel-container {
-  width: 100%; /* Ocupa el ancho completo del contenedor */
-  max-width: 800px; /* Limita el ancho máximo del carrusel */
+  width: 100%;
+  max-width: 800px;
   height: 300px;
   overflow: hidden;
-  margin: 0 auto; /* Centra el carrusel horizontalmente */
+  margin: 0 auto;
 }
 
 .carousel-item {
@@ -45,25 +45,25 @@
   align-items: center;
   justify-content: flex-start;
   background-color: #121212;
-  border-radius: 12px; /* Increase border radius for a softer look */
-  padding: 20px; /* Increase padding for better spacing */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation */
-  height: 150px; /* Ensure enough height for content */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 150px;
   width: 500px;
 }
 
 .testimonial:hover {
-  transform: scale(1.05); /* Slight enlargement on hover */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial-photo {
-  width: 80px; /* Larger photo */
-  height: 80px; /* Larger photo */
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
-  margin-right: 20px; /* More spacing between photo and text */
-  border: 3px solid #8e58da; /* Accent border */
+  margin-right: 20px;
+  border: 3px solid #8e58da;
 }
 
 .testimonial-content {
@@ -73,61 +73,60 @@
 
 .testimonial-comment {
   font-style: italic;
-  margin: 0 0 10px 0; /* Add spacing between comment and name */
-  color: #e0e0e0; /* text-uiux-2 */
-  font-size: 16px; /* Slightly larger text */
+  margin: 0 0 10px 0;
+  color: #e0e0e0;
+  font-size: 16px;
 }
 
 .testimonial-name {
   font-weight: bold;
   margin: 0 0 5px 0;
-  color: #e0e0e0; /* text-uiux-5 */
-  font-size: 18px; /* Slightly larger name */
+  color: #e0e0e0;
+  font-size: 18px;
 }
 
 .testimonial-position {
   margin: 0;
-  color: #9f96d9; /* text-uiux-3 */
-  font-size: 14px; /* Subtle font size for the position */
+  color: #9f96d9;
+  font-size: 14px;
 }
 
 .availability-message h3 {
   color: #a8ee95;
 }
 
-/* Ajuste para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column; /* Cambia a diseño vertical */
+    flex-direction: column;
   }
 
   .availability-message {
-    order: 1; /* Aparece primero */
+    order: 1;
   }
 
   .footer-right {
-    order: 2; /* Aparece segundo */
+    order: 2;
   }
 
   .contact-info {
-    order: 3; /* Aparece tercero */
+    order: 3;
   }
 
   .footer-section {
-    width: 100%; /* Ocupa todo el ancho */
-    margin: 20px 0; /* Espaciado vertical entre secciones */
+    width: 100%;
+    margin: 20px 0;
   }
 
   .social-links a {
-    margin-right: 15px; /* Espaciado más amplio en pantallas pequeñas */
+    margin-right: 15px;
   }
 
   .carousel-container {
-    height: auto; /* Ajusta la altura automáticamente */
+    height: auto;
   }
 
   .testimonial {
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
   }
 }
 
@@ -135,22 +134,22 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 100%; /* Asegura que no desborde el contenedor */
+  width: 100%;
   padding: 20px;
-  box-sizing: border-box; /* Considera el padding en el ancho total */
+  box-sizing: border-box;
 }
 
 .copyright-section {
   text-align: center;
-  margin-top: 20px; /* Espaciado superior para separar de otros elementos */
+  margin-top: 20px;
 }
 
 .copyright-section p {
-  margin: 5px 0; /* Espaciado uniforme entre líneas */
-  color: #e0e0e0; /* Asegura consistencia con el tema */
+  margin: 5px 0;
+  color: #e0e0e0;
 }
 
 .text-sm {
@@ -159,5 +158,5 @@
 
 .text-xs {
   font-size: 12px;
-  color: #999999; /* Color más tenue para © */
+  color: #999999;
 }

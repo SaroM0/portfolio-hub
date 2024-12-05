@@ -1,15 +1,12 @@
-/* Cambiar el color de la línea del timeline */
 .vertical-timeline::before {
   background: #8e58da;
 }
 
-/* Estilo del contenido de los elementos */
 .vertical-timeline-element-content {
   background: #121212;
   color: #e0e0e0;
 }
 
-/* Flecha que apunta al contenido */
 .vertical-timeline-element-content::before {
   border-right: 7px solid #121212;
 }

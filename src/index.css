@@ -9,7 +9,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Background Colors */
 .bg-uiux-1 {
   background-color: #8e58da;
 }
@@ -26,7 +25,6 @@ body {
   background-color: #a8ee95;
 }
 
-/* Text Colors */
 .text-uiux-1 {
   color: #8e58da;
 }
@@ -43,7 +41,6 @@ body {
   color: #a8ee95;
 }
 
-/* Border Colors */
 .border-uiux-1 {
   border-color: #8e58da;
 }

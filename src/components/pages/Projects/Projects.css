@@ -1,8 +1,7 @@
-/* Contenedor principal de proyectos */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
-  gap: 20px; /* Espaciado entre las tarjetas */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin: 30px;
 }
 
@@ -10,7 +9,6 @@
   margin-left: 35px;
 }
 
-/* Tarjetas de proyecto */
 .project-item {
   display: flex;
   flex-direction: column;
@@ -27,7 +25,6 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Detalles del proyecto */
 .project-details {
   display: flex;
   flex-direction: column;
@@ -39,7 +36,6 @@
   color: var(--text-uiux-2);
 }
 
-/* Botón de GitHub */
 .github-link {
   display: flex;
   align-items: center;
@@ -48,63 +44,61 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--bg-uiux-1);
-  color: var(--text-uiux-5); /* Contraste para el icono */
+  color: var(--text-uiux-5);
   font-size: 1.5rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .github-link:hover {
   background-color: var(--bg-uiux-5);
-  color: var(--bg-uiux-4); /* Contraste en hover */
+  color: var(--bg-uiux-4);
   transform: scale(1.1);
 }
 
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Una sola columna */
-    gap: 15px; /* Reduce el espaciado entre las tarjetas */
-    margin: 20px; /* Reduce el margen general */
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px;
   }
 
   .projects-title {
-    margin-left: 20px; /* Ajusta el margen del título */
-    text-align: center; /* Centra el título */
+    margin-left: 20px;
+    text-align: center;
   }
 
   .project-item {
-    padding: 10px; /* Reduce el padding interno */
-    gap: 10px; /* Reduce el espacio entre elementos */
+    padding: 10px;
+    gap: 10px;
   }
 
   .project-details p {
-    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    font-size: 0.9rem;
   }
 
   .github-link {
-    width: 35px; /* Botón más pequeño */
+    width: 35px;
     height: 35px;
-    font-size: 1.2rem; /* Reduce el tamaño del icono */
+    font-size: 1.2rem;
   }
 }
 
-/* Responsividad para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .projects-container {
-    margin: 10px; /* Márgenes más pequeños */
-    gap: 10px; /* Espaciado reducido */
+    margin: 10px;
+    gap: 10px;
   }
 
   .project-item {
-    padding: 8px; /* Ajusta aún más el padding */
+    padding: 8px;
   }
 
   .project-details p {
-    font-size: 0.8rem; /* Texto más compacto */
+    font-size: 0.8rem;
   }
 
   .github-link {
-    width: 30px; /* Botón más compacto */
+    width: 30px;
     height: 30px;
     font-size: 1rem;
   }

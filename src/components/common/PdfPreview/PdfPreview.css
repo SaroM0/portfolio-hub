@@ -4,12 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    18,
-    18,
-    18,
-    0.9
-  ); /* Matches the dark theme background with transparency */
+  background-color: rgba(18, 18, 18, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,8 +12,8 @@
 }
 
 .pdf-preview-container {
-  background: #121212; /* Dark theme background */
-  border: 2px solid #8e58da; /* Accent border from the theme */
+  background: #121212;
+  border: 2px solid #8e58da;
   border-radius: 8px;
   padding: 20px;
   max-width: 90%;
@@ -31,8 +26,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #8e58da; /* Accent color */
-  color: #e0e0e0; /* Light text for contrast */
+  background: #8e58da;
+  color: #e0e0e0;
   border: none;
   border-radius: 4px;
   padding: 5px 10px;
@@ -42,7 +37,7 @@
 }
 
 .close-preview-button:hover {
-  background: #9f96d9; /* Lighter accent for hover state */
+  background: #9f96d9;
 }
 
 .pdf-navigation {
@@ -55,8 +50,8 @@
 
 .navigation-button {
   padding: 5px 10px;
-  background: #8e58da; /* Accent button color */
-  color: #e0e0e0; /* Light text for contrast */
+  background: #8e58da;
+  color: #e0e0e0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -64,16 +59,16 @@
 }
 
 .navigation-button:disabled {
-  background: #9f96d9; /* Muted accent color for disabled state */
+  background: #9f96d9;
   cursor: not-allowed;
 }
 
 .navigation-button:hover:not(:disabled) {
-  background: #a8ee95; /* Green accent for hover state */
+  background: #a8ee95;
 }
 
 .pdf-navigation span {
   font-size: 16px;
   font-weight: bold;
-  color: #e0e0e0; /* Light text color for visibility */
+  color: #e0e0e0;
 }

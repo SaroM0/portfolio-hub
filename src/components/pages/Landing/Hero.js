@@ -12,7 +12,7 @@ function Hero() {
   const delayBetweenWords = 2000;
 
   useEffect(() => {
-    const words = t("hero.dynamicWords", { returnObjects: true }); // Palabras dinámicas traducidas
+    const words = t("hero.dynamicWords", { returnObjects: true });
 
     let wordIndex = 0;
     let charIndex = 0;

@@ -4,15 +4,14 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "./PdfPreview.css";
 
-// Configure the PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url
 ).toString();
 
 const PdfPreview = ({ pdfUrl, onClose }) => {
-  const [numPages, setNumPages] = useState(null); // Total pages in the PDF
-  const [pageNumber, setPageNumber] = useState(1); // Current page being viewed
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);

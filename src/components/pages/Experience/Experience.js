@@ -14,7 +14,6 @@ import oasisLogo from "../../../assets/ExperienceImages/Oasis.jpeg";
 const Experience = () => {
   const { t } = useTranslation();
 
-  // Mover `experiences` dentro del cuerpo del componente
   const experiences = [
     {
       date: t("experience.straico.date"),

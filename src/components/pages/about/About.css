@@ -1,11 +1,11 @@
 .about-me-container {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centrado vertical */
+  align-items: center;
   gap: 40px;
   padding: 50px;
   margin: 0 auto;
-  min-height: 80vh; /* Asegura que el contenedor ocupe al menos el 80% de la altura de la ventana */
+  min-height: 80vh;
 }
 
 .about-me-left,
@@ -15,9 +15,9 @@
 
 .about-me-left {
   text-align: left;
-  display: flex; /* Alineación interna */
+  display: flex;
   flex-direction: column;
-  justify-content: center; /* Centrado vertical interno */
+  justify-content: center;
 }
 
 .bio-container {
@@ -59,8 +59,8 @@
 
 .skills-content ul,
 .interests-container ul {
-  list-style: none; /* Elimina el estilo predeterminado */
-  padding-left: 20px; /* Añade espacio para los puntos personalizados */
+  list-style: none;
+  padding-left: 20px;
 }
 
 .skills-content li,
@@ -68,24 +68,23 @@
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 8px;
-  position: relative; /* Permite posicionar los puntos */
-  padding-left: 20px; /* Espacio para los puntos */
+  position: relative;
+  padding-left: 20px;
 }
 
 .skills-content li::before,
 .interests-container li::before {
-  content: "•"; /* Punto personalizado */
-  color: #a8ee95; /* Color del punto */
-  position: absolute; /* Posiciona el punto antes del texto */
-  left: 0; /* Alinea el punto a la izquierda */
-  font-size: 1.2em; /* Ajusta el tamaño */
+  content: "•";
+  color: #a8ee95;
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
 }
 
-/* Responsividad para dispositivos pequeños */
 @media (max-width: 768px) {
   .about-me-container {
     flex-direction: column;
-    align-items: center; /* Centrado vertical en dispositivos pequeños */
+    align-items: center;
     text-align: center;
   }
 
