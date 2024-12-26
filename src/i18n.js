@@ -216,7 +216,7 @@ i18n.use(initReactI18next).init({
           copyright: "This project was lovingly crafted by",
           technologies:
             "using React, Next.js, and Tailwind CSS. Deployed with Vercel.",
-          rightsReserved: "All rights reserved.",
+          rightsReserved: "",
         },
       },
     },
@@ -441,7 +441,7 @@ i18n.use(initReactI18next).init({
           copyright: "Este proyecto fue creado con cariño por",
           technologies:
             "utilizando React, Next.js y Tailwind CSS. Desplegado con Vercel.",
-          rightsReserved: "Todos los derechos reservados.",
+          rightsReserved: "",
         },
       },
     },
