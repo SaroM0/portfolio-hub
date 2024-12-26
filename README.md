@@ -1,70 +1,74 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# SaroM0 Portfolio Hub
 
-## Available Scripts
+This repository contains the **frontend of my personal portfolio website**, showcasing my professional experience, skills, projects, and achievements. Built using modern web development tools, this project is designed to provide a visually appealing and responsive interface to highlight my work and connect with potential collaborators or employers.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Landing Page**: A visually engaging introduction to the portfolio, including social media links and a hero section.
+- **About Section**: Detailed information about me, including bio, skills, and personal interests.
+- **Education**: A timeline showcasing my educational background and certifications.
+- **Experience**: Highlights my professional journey and key achievements.
+- **Projects**: A collection of selected projects, with descriptions and links to repositories or live demos.
+- **Contact**: Provides ways to get in touch with me, including a contact form and social links.
+- **Dynamic Backgrounds**: Includes particle effects for an interactive user experience.
+- **Footer**: Features testimonials and quick navigation links.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Directory Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `.github/`: GitHub Actions for CI/CD workflows.
+- `public/`: Static files and manifest.
+- `src/`: Application source code.
+  - `assets/`: Images and static assets.
+  - `components/`: Component-based structure.
+    - `pages/`: Page-specific components.
+    - `common/`: Reusable components.
+  - `App.js`: Main application component.
+  - `index.js`: Application entry point.
+  - `tailwind.config.js`: Tailwind CSS configuration.
+- `package.json`: Dependencies and scripts.
+- `README.md`: Project documentation.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React.js**: Component-based library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for custom styling.
+- **JavaScript**: Core programming language for frontend logic.
+- **HTML5 & CSS3**: Markup and styling for responsive and semantic design.
+- **i18n**: Internationalization library for supporting multiple languages.
+- **GitHub Actions**: CI/CD workflows for automated deployment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Pages**:
+  - **Landing**: Includes the main hero section and social media links.
+  - **About**: Details about personal bio, skills, and interests.
+  - **Education**: Lists educational background and certifications.
+  - **Experience**: Highlights professional history and achievements.
+  - **Projects**: Displays portfolio projects with links.
+  - **Contact**: Provides ways to connect via a contact form or links.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Common Components**:
+  - **Navbar**: Provides navigation across different sections.
+  - **Footer**: Includes testimonials and quick links.
+  - **Reusable Widgets**: Includes components like particle backgrounds, scroll-to-top buttons, and more.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to connect with me for collaboration or inquiries:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Email**: s.rodriguezm2@uniandes.edu.co
+- **Portfolio URL**: [My Portfolio]([https://your-portfolio.com](http://santiagorodriguez.info/))
+- **LinkedIn**: [LinkedIn]([https://linkedin.com/in/yourusername](https://www.linkedin.com/in/santiago-rodriguez-mora-5b2a17267/))
