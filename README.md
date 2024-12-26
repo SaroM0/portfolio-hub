@@ -70,5 +70,6 @@ This repository contains the **frontend of my personal portfolio website**, show
 Feel free to connect with me for collaboration or inquiries:
 
 - **Email**: s.rodriguezm2@uniandes.edu.co
-- **Portfolio URL**: [My Portfolio]([https://your-portfolio.com](http://santiagorodriguez.info/))
-- **LinkedIn**: [LinkedIn]([https://linkedin.com/in/yourusername](https://www.linkedin.com/in/santiago-rodriguez-mora-5b2a17267/))
+- **Portfolio URL**: [My Portfolio](http://santiagorodriguez.info/)
+- **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/santiago-rodriguez-mora-5b2a17267/)
+
