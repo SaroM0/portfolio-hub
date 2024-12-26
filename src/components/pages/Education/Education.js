@@ -8,8 +8,6 @@ import gcpLogo from "../../../assets/CertificationImages/googleCloud.png";
 
 import "./Education.css";
 
-import PdfPreview from "../../common/PdfPreview/PdfPreview";
-
 const cvPdf = "/Rodriguez_Santiago_CV.pdf";
 
 const Education = () => {
