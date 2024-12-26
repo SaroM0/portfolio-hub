@@ -78,7 +78,7 @@ i18n.use(initReactI18next).init({
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Apr 2023",
           },
-          viewCvButton: "View My Full CV",
+          viewCvButton: "Check My Full CV",
         },
         certifications: {
           issuedBy: "Issued by",
@@ -302,7 +302,7 @@ i18n.use(initReactI18next).init({
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Abr 2023",
           },
-          viewCvButton: "Ver Mi CV Completo",
+          viewCvButton: "Mira Mi CV Completo",
         },
         certifications: {
           issuedBy: "Emitido por",
