@@ -17,13 +17,13 @@ function App() {
   const [isFloatingWindowVisible, setFloatingWindowVisible] = useState(true);
 
   const handleClose = () => {
-    setFloatingWindowVisible(false);
+    setFloatingWindowVisible(true);
   };
 
   return (
     <>
       <Analytics />
-      <div className="app">
+      <div id="app">
         <Navbar />
         <ScrollToTop />
         {isFloatingWindowVisible && (

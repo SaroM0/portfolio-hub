@@ -17,11 +17,7 @@ const Education = () => {
   const { t } = useTranslation();
 
   const handleShowPdf = () => {
-    setShowPdf(true);
-  };
-
-  const handleClosePdf = () => {
-    setShowPdf(false);
+    window.open(cvPdf, "_blank");
   };
 
   return (
@@ -88,8 +84,6 @@ const Education = () => {
           {t("education.viewCvButton")}
         </button>
       </div>
-
-      {showPdf && <PdfPreview pdfUrl={cvPdf} onClose={handleClosePdf} />}
     </div>
   );
 };

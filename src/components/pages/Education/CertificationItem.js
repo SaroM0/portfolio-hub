@@ -28,9 +28,7 @@ const CertificationItem = ({
           target="_blank"
           rel="noopener noreferrer"
           className="credential-link"
-        >
-          {t("certifications.viewCredential")}
-        </a>
+        ></a>
       </div>
     </div>
   );
