@@ -195,22 +195,11 @@ i18n.use(initReactI18next).init({
           },
           testimonials: {
             testimonial1: {
-              name: "Person Example 1",
-              position: "Role",
-              company: "Company",
-              comment: "Example text",
-            },
-            testimonial2: {
-              name: "Person Example 2",
-              position: "Role",
-              company: "Company",
-              comment: "Example text",
-            },
-            testimonial3: {
-              name: "Person Example 3",
-              position: "Role",
-              company: "Company",
-              comment: "Example text",
+              name: "Arturo Henao",
+              position: "CEO/Founder",
+              company: "Straico / OnTrack",
+              comment:
+                "Don't get distracted by a young developer's age. Building digital products from scratch, scaling them, and finding product-market fit is by far the hardest job I've done. But having a team member like Santi makes it so much easier. He's one of the best developers I've known—not just for his technical skills, but for his personality, discipline, and enthusiasm",
             },
           },
           copyright: "This project was lovingly crafted by",
@@ -420,22 +409,11 @@ i18n.use(initReactI18next).init({
           },
           testimonials: {
             testimonial1: {
-              name: "Persona Ejemplo 1",
-              position: "Cargo",
-              company: "Compañía",
-              comment: "Texto de ejemplo",
-            },
-            testimonial2: {
-              name: "Persona Ejemplo 2",
-              position: "Cargo",
-              company: "Compañía",
-              comment: "Texto de ejemplo",
-            },
-            testimonial3: {
-              name: "Persona Ejemplo 3",
-              position: "Cargo",
-              company: "Compañía",
-              comment: "Texto de ejemplo",
+              name: "Arturo Henao",
+              position: "CEO/Founder",
+              company: " Straico / OnTrack",
+              comment:
+                "No te dejes distraer por la edad de un joven desarrollador. Crear productos digitales desde cero, escalarlos y encontrar la adecuación entre el producto y el mercado es, con diferencia, el trabajo más duro que he hecho. Pero contar con un miembro del equipo como Santi lo hace mucho más fácil. Es uno de los mejores desarrolladores que he conocido, no sólo por sus habilidades técnicas, sino también por su personalidad, disciplina y entusiasmo.",
             },
           },
           copyright: "Este proyecto fue creado con cariño por",

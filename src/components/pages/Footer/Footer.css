@@ -45,12 +45,12 @@
   align-items: center;
   justify-content: flex-start;
   background-color: #121212;
-  border-radius: 12px;
+  border-radius: 10%;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 150px;
-  width: 500px;
+  max-width: 500px;
+  min-height: 150px;
 }
 
 .testimonial:hover {
@@ -64,18 +64,22 @@
   border-radius: 100%;
   margin-right: 20px;
   border: 3px solid #8e58da;
+  flex-shrink: 0;
 }
-
 .testimonial-content {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  overflow-wrap: break-word;
 }
 
 .testimonial-comment {
   font-style: italic;
   margin: 0 0 10px 0;
   color: #e0e0e0;
-  font-size: 16px;
+  font-size: 12px;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .testimonial-name {
@@ -83,12 +87,16 @@
   margin: 0 0 5px 0;
   color: #e0e0e0;
   font-size: 18px;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .testimonial-position {
   margin: 0;
   color: #9f96d9;
   font-size: 14px;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .availability-message h3 {

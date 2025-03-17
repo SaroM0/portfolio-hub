@@ -12,34 +12,18 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import arturoImage from "../../../assets/ReferencesImages/arturo.jpeg";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   const testimonials = [
     {
-      photo:
-        "https://covalto-production-website.s3.amazonaws.com/Hero_Mobile_Cuenta_Personas_V1_1_8046e424ea.webp",
+      photo: arturoImage,
       name: t("footer.testimonials.testimonial1.name"),
       position: t("footer.testimonials.testimonial1.position"),
       company: t("footer.testimonials.testimonial1.company"),
       comment: t("footer.testimonials.testimonial1.comment"),
-    },
-    {
-      photo:
-        "https://www.shutterstock.com/image-photo/handsome-happy-african-american-bearded-260nw-2460702995.jpg",
-      name: t("footer.testimonials.testimonial2.name"),
-      position: t("footer.testimonials.testimonial2.position"),
-      company: t("footer.testimonials.testimonial2.company"),
-      comment: t("footer.testimonials.testimonial2.comment"),
-    },
-    {
-      photo:
-        "https://www.shutterstock.com/image-photo/handsome-happy-african-american-bearded-260nw-2460702995.jpg",
-      name: t("footer.testimonials.testimonial3.name"),
-      position: t("footer.testimonials.testimonial3.position"),
-      company: t("footer.testimonials.testimonial3.company"),
-      comment: t("footer.testimonials.testimonial3.comment"),
     },
   ];
 

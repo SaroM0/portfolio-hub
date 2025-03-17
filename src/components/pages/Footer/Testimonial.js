@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 
 const Testimonial = ({ photo, name, position, company, comment }) => {
   return (
