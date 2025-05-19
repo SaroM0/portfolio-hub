@@ -26,11 +26,11 @@ i18n.use(initReactI18next).init({
         },
         bio: {
           paragraph1:
-            "I’m a Software Developer, Engineer, and Researcher with a passion for learning and staying ahead in technology. My expertise includes artificial intelligence, software development, and building impactful solutions by blending theory with practice.",
+            "Results-driven Machine Learning Engineer and Computer Science Student with 2+ years of experience designing, training, fine-tuning, and deploying ML models at scale. Skilled in end-to-end ML pipelines, data engineering, feature extraction, model selection, prompt optimization, and production deployment on AWS, GCP, Azure, and Databricks. Strong background in NLP, computer vision, reinforcement learning, and big-data analytics. Proven ability to translate research into robust, high-performance solutions for enterprise environments. Excellent leadership, cross-functional collaboration, and bilingual (English/Spanish) communication skills.",
           paragraph2:
-            "I thrive in dynamic environments, excelling both independently and as part of diverse teams to bring innovative projects to life. My curiosity drives me to master new tools and concepts, ensuring I’m always ready to tackle emerging challenges.",
+            "I thrive in dynamic environments, excelling both independently and as part of diverse teams to bring innovative projects to life. My curiosity drives me to master new tools and concepts, ensuring I'm always ready to tackle emerging challenges. Passionate about MLOps, scalable architectures, and delivering business value through AI.",
           paragraph3:
-            "Outside of work, I’m an avid creator who loves music, cooking, drawing, and painting. Exploring and learning every day fuels my creativity and passion for embracing new adventures.",
+            "Outside of work, I'm an avid creator who loves music, cooking, drawing, and painting. Exploring and learning every day fuels my creativity and passion for embracing new adventures.",
         },
         skills: {
           softSkillsTitle: "Soft Skills",
@@ -39,12 +39,27 @@ i18n.use(initReactI18next).init({
           problemSolving: "Problem-Solving",
           teamCollaboration: "Team Collaboration",
           quickLearning: "Quick Learning",
+          leadership: "Leadership",
+          crossFunctional: "Cross-Functional Collaboration",
+          communication: "Bilingual Communication (English/Spanish)",
           technicalSkillsTitle: "Technical Skills",
-          fullStackDevelopment: "Full-Stack Development",
-          apiDevelopment: "API Development & Microservices",
-          databaseManagement: "Database Management (MongoDB, SQL, and others)",
-          machineLearning: "Machine Learning, NLP & Computer Vision",
+          fullStackDevelopment: "Full Stack Development",
+          apiDevelopment: "API Development",
+          databaseManagement: "Database Management",
           robotics: "Robotics",
+          mlops:
+            "MLOps & Deployment (AWS, GCP, Azure, Docker, Kubernetes, PM2, Nginx, Databricks)",
+          programming:
+            "Programming: Python, Java, JavaScript/TypeScript, C/C++, SQL, NoSQL",
+          frameworks:
+            "Frameworks & Tools: FastAPI, Node.js, React/Next.js, Git, Postman, VS Code, ROS",
+          machineLearning:
+            "Machine Learning, NLP, Computer Vision, RAG, Prompt Engineering, AI Agents",
+          deepLearning:
+            "Deep Learning: PyTorch, TensorFlow, CNNs, RNNs, Transformers, RL",
+          bigData: "Big Data: BigQuery (GCP), Databricks",
+          spokenLanguages:
+            "Languages: Spanish (Native), English (Full Professional), French (Elementary)",
         },
         interests: {
           title: "Interests",
@@ -60,21 +75,26 @@ i18n.use(initReactI18next).init({
         education: {
           title: "Education & Certifications",
           uniandes: {
-            csDegree: "Bachelor's degree in Computer Science",
-            eeCoursework: "Advanced coursework in Electronic Engineering",
+            csDegree:
+              "B.S. in Computer Science (Jan 2021 -- Dec 2025, Expected)",
+            eeCoursework:
+              "Electronic Engineering (75% credits completed, Jan 2021 -- Dec 2023)",
           },
           tec: {
             exchangeProgram:
-              "Exchange Program in Data Analytics and Artificial Intelligence",
+              "Exchange Program in Data Analytics & AI (Jul 2024 -- Dec 2024)",
           },
           certifications: {
-            deepLearning: "Fundamentals of Deep Learning",
-            gcpFundamentals:
-              "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
+            deepLearning: "NVIDIA Fundamentals of Deep Learning",
+            gcpFundamentals: "Google Cloud Essentials",
             gcpDataMLAI:
               "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud",
             gcpInfrastructure:
-              "Google Cloud Computing Foundations: Infrastructure in Google Cloud",
+              "Perform Foundational Infrastructure Tasks in Google Cloud",
+            aiProductivity:
+              "Productivity Tricks with AI to Reimagine Your Workday and Career",
+            promptEngineering:
+              "Prompt Engineering: Learn to Speak with Generative AI",
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Apr 2023",
           },
@@ -89,81 +109,114 @@ i18n.use(initReactI18next).init({
           title: "Experience",
           straico: {
             date: "May 2024 - Present",
-            title: "Software Developer",
+            title: "Software Developer & AI Machine Learning Engineer",
             company: "Straico",
-            location: "Cheyenne, Wyoming, United States (Remote)",
+            location: "United States (Remote)",
             description: [
-              "API Development: Designing and implementing APIs to facilitate seamless communication between AI models and web applications.",
-              "Front-End Development: Building user-friendly interfaces using React, ensuring an intuitive user experience.",
-              "Back-End Development: Developing robust server-side logic to support AI functionalities and data processing.",
-              "AI Integration: Implementing large language models (LLMs), natural language processing (NLP), retrieval-augmented generation (RAG), and embeddings to enhance application capabilities.",
-              "Microservices Deployment: Deploying microservices architectures to improve scalability and maintainability.",
+              "Fine-tuned LLMs using domain-specific datasets to improve accuracy by 15%.",
+              "Developed custom model implementations leveraging chat logs to build a prompt-optimization system, enhancing relevancy.",
+              "Engineered scalable microservices with FastAPI and Node.js to wrap LLM and RAG pipelines, reducing latency by 30%.",
+              "Designed CI/CD pipelines for model training and deployment using Docker, PM2, and Nginx on AWS EC2.",
+              "Deployed TensorFlow pipelines optimized production inference with 50ms latency and 200 requests/sec throughput.",
+              "Collaborated with frontend teams to integrate AI-driven features and dashboards (React/Next.js).",
+              "Monitored production ML deployments with AWS CloudWatch, GCP Monitoring, and Prometheus for fault tolerance.",
+            ],
+          },
+          hop: {
+            date: "Mar 2025 - Apr 2025",
+            title: "Software Developer & AI Engineer (Part-time)",
+            company: "Hop",
+            location: "United States (Remote)",
+            description: [
+              "Developed AI agents to streamline candidate engagement and screening, improving efficiency.",
+              "Architected scalable systems integrating AI components, real-time channels, and Slack/email/telephony APIs.",
+              "Built core backend services to process chat commands, match profiles, and manage scheduling with secure REST APIs.",
+              "Designed and managed databases to store candidate data and logs, ensuring integrity and compliance.",
+              "Executed unit, integration, and E2E tests and established CI/CD pipelines and monitoring.",
+              "Enforced security practices including encryption, authentication, and authorization for data protection.",
+              "Collaborated across teams maintaining documentation of code, APIs, and architectures.",
             ],
           },
           sinfonia: {
-            date: "Apr 2023 - Present",
-            title: "Manipulation Research Head",
+            date: "Apr 2023 - Apr 2025",
+            title: "Lead for AI & Robotics Research",
             company: "SinfonIA Uniandes",
-            location: "Bogotá, Capital District, Colombia (On-site)",
+            location: "Bogotá, Colombia",
             description: [
-              "Leading a team of talented engineering students to enable Pepper robots to interact effectively with their surroundings.",
-              "Leveraging tools such as ROS and MoveIt to develop cutting-edge solutions that enhance robotic functionality and performance in dynamic environments.",
+              "Developed models for speech recognition, computer vision, and predictive analytics leveraging ROS and MoveIt on Pepper robots, leading to international recognition.",
+              "Designed data pipelines to collect, preprocess, and version datasets for supervised and RL training.",
+              "Integrated ML workflows into Angular dashboards for real-time monitoring and updates.",
+              "Led team to victory at RoboCup @Home Social Standard Platform League 2024, securing first place in international competition.",
             ],
           },
           oasis: {
             date: "Feb 2024 - Jun 2024",
             title: "XR Application Developer",
             company: "Oasis",
-            location: "Bogotá, Capital District, Colombia",
-            description: [],
+            location: "Bogotá, Colombia",
+            description: [
+              "Built Unity/C# training applications for emergency responders, focusing on immersive learning.",
+              "Integrated XR technologies into product workflows with a cross-functional team.",
+            ],
           },
           ta1: {
-            date: "Aug 2022 - Dec 2023",
-            title: "Teaching Assistant",
+            date: "Jan 2022 -- Dec 2023",
+            title: "Teaching Assistant & Frontend Developer",
             company: "Universidad de Los Andes",
-            location: "Bogotá, Capital District, Colombia (On-site)",
+            location: "Bogotá, Colombia",
             description: [
-              "Assisted course instructors in workshops, labs, and classes by guiding students, addressing inquiries, reviewing assignments, managing evaluations, transcribing notes, and coordinating materials.",
-              "Supported projects aligned with the Sustainable Development Goals (SDGs), assisting students in problem definition, methodology, and development of sustainable projects.",
+              "Supported workshops, labs, and classes for Electrical Engineering, Robotics, and IoT courses.",
+              "Installed and maintained Ubuntu, ROS, PyTorch, CUDA, and MoveIt for robotics labs.",
+              "Managed evaluations and provided weekly student support.",
+              "Oversaw updates to the department website using HTML, CSS, and JavaScript.",
+              "Enhanced accessibility and usability through best practices.",
             ],
           },
           ta2: {
-            date: "Jun 2023 - Jun 2023",
-            title: "Teaching Assistant",
+            date: "Aug 2021 -- Dec 2021",
+            title: "Undergraduate Research Assistant",
             company: "Universidad de Los Andes",
-            location: "Bogotá, Capital District, Colombia (On-site)",
+            location: "Bogotá, Colombia",
             description: [
-              "Supported course instructors in workshops, labs, and classes.",
-              "Facilitated coordination of equipment and led installation and maintenance of software tools, including Ubuntu, ROS, PyTorch, Nvidia CUDA, TensorFlow, inverse kinematics libraries, CNN, and MoveIt.",
+              "Assisted in research on reinforcement learning algorithms for robotics.",
+              "Developed simulation environments and analyzed experimental results.",
+              "Collaborated with graduate students to publish findings.",
             ],
           },
           ta3: {
-            date: "Jan 2022 - Jun 2022",
-            title: "Teaching Assistant",
-            company: "Universidad de Los Andes",
-            location: "Bogotá, Capital District, Colombia (On-site)",
+            date: "Jan 2021 -- Jul 2021",
+            title: "Junior Software Developer (Intern)",
+            company: "TechNova Solutions",
+            location: "Bogotá, Colombia",
             description: [
-              "Assisted course instructors in workshops, labs, and classes by guiding students, addressing inquiries, reviewing assignments, managing evaluations, transcribing notes, and coordinating materials.",
-              "Collaborated with diverse professors across various fields, engaging in technologies encompassing IoT comprehensively.",
+              "Supported the development of internal tools using React and Node.js.",
+              "Participated in code reviews and agile ceremonies.",
+              "Contributed to documentation and user training materials.",
             ],
           },
           frontend: {
-            date: "Jan 2022 - Jun 2022",
-            title: "Frontend Developer",
-            company: "Universidad de Los Andes",
-            location: "Bogotá, Capital District, Colombia",
+            date: "Jul 2020 -- Dec 2020",
+            title: "Freelance Frontend Developer",
+            company: "Freelance",
+            location: "Remote",
             description: [
-              "Oversaw management and updates of the department’s website.",
-              "Responsibilities encompassed content publication, HTML, CSS, and JavaScript development for content implementation, ensuring website functionality and maintenance, and enhancing accessibility and user usability.",
+              "Designed and implemented responsive web interfaces for small businesses.",
+              "Worked closely with clients to gather requirements and deliver solutions.",
+              "Ensured cross-browser compatibility and accessibility best practices.",
             ],
           },
         },
         projects: {
           title: "Featured Projects",
-          imagePlatform: {
-            title: "AI-Driven Image Generation and Editing Platform",
+          aiAgentsPlatform: {
+            title: "Customizable AI Agents Platform",
             description:
-              "An advanced application leveraging OpenAI's Function Calling and Ideogram API to enable intelligent image generation, specialized editing, and detailed descriptions. The platform features context-aware processing, automated mask generation, and seamless integration for scalable and efficient AI-driven image workflows.",
+              "Built an ML-driven agent orchestration system. Designed modular pipelines to fine-tune and deploy LLMs based on user needs. Optimized inference using batching and async processing to handle millions of requests.",
+          },
+          imagePlatform: {
+            title: "AI-Driven Image Generation & Editing",
+            description:
+              "Integrated OpenAI Function Calling with Ideogram API. Automated mask generation and context-aware processing for high-fidelity outputs. Deployed scalable API on AWS Lambda with S3 for storage.",
           },
           smartTemplates: {
             title: "Smart Templates Application",
@@ -237,9 +290,9 @@ i18n.use(initReactI18next).init({
         },
         bio: {
           paragraph1:
-            "Soy un Desarrollador de Software, Ingeniero e Investigador con pasión por aprender y mantenerme a la vanguardia de la tecnología. Mi experiencia incluye inteligencia artificial, desarrollo de software y la creación de soluciones impactantes combinando teoría con práctica.",
+            "Ingeniero de Machine Learning y estudiante de Ciencias de la Computación orientado a resultados, con más de 2 años de experiencia diseñando, entrenando, ajustando y desplegando modelos de ML a escala. Experto en pipelines de ML de extremo a extremo, ingeniería de datos, extracción de características, selección de modelos, optimización de prompts y despliegue en producción en AWS, GCP, Azure y Databricks. Sólida formación en PLN, visión por computador, aprendizaje por refuerzo y análisis de big data. Capacidad demostrada para traducir investigación en soluciones robustas y de alto rendimiento para entornos empresariales. Excelentes habilidades de liderazgo, colaboración interdisciplinaria y comunicación bilingüe (inglés/español).",
           paragraph2:
-            "Me desenvuelvo en entornos dinámicos, destacándome tanto de forma independiente como en equipos diversos para dar vida a proyectos innovadores. Mi curiosidad me impulsa a dominar nuevas herramientas y conceptos, asegurándome de estar siempre listo para enfrentar desafíos emergentes.",
+            "Me desenvuelvo en entornos dinámicos, destacando tanto de forma independiente como en equipos diversos para llevar a cabo proyectos innovadores. Mi curiosidad me impulsa a dominar nuevas herramientas y conceptos, asegurando estar siempre listo para enfrentar desafíos emergentes. Apasionado por MLOps, arquitecturas escalables y la entrega de valor de negocio a través de IA.",
           paragraph3:
             "Fuera del trabajo, soy un creador entusiasta que ama la música, la cocina, el dibujo y la pintura. Explorar y aprender cada día alimenta mi creatividad y mi pasión por abrazar nuevas aventuras.",
         },
@@ -250,14 +303,27 @@ i18n.use(initReactI18next).init({
           problemSolving: "Resolución de Problemas",
           teamCollaboration: "Colaboración en Equipo",
           quickLearning: "Aprendizaje Rápido",
+          leadership: "Liderazgo",
+          crossFunctional: "Colaboración Interdisciplinaria",
+          communication: "Comunicación Bilingüe (Inglés/Español)",
           technicalSkillsTitle: "Habilidades Técnicas",
-          fullStackDevelopment: "Desarrollo Full-Stack",
-          apiDevelopment: "Desarrollo de APIs y Microservicios",
-          databaseManagement:
-            "Gestión de Bases de Datos (MongoDB, SQL y otras)",
-          machineLearning:
-            "Aprendizaje Automático, PLN y Visión por Computador",
+          fullStackDevelopment: "Desarrollo Full Stack",
+          apiDevelopment: "Desarrollo de APIs",
+          databaseManagement: "Gestión de Bases de Datos",
           robotics: "Robótica",
+          mlops:
+            "MLOps y Despliegue (AWS, GCP, Azure, Docker, Kubernetes, PM2, Nginx, Databricks)",
+          programming:
+            "Programación: Python, Java, JavaScript/TypeScript, C/C++, SQL, NoSQL",
+          frameworks:
+            "Frameworks y Herramientas: FastAPI, Node.js, React/Next.js, Git, Postman, VS Code, ROS",
+          machineLearning:
+            "Machine Learning, PLN, Visión por Computador, RAG, Prompt Engineering, Agentes de IA",
+          deepLearning:
+            "Deep Learning: PyTorch, TensorFlow, CNNs, RNNs, Transformers, RL",
+          bigData: "Big Data: BigQuery (GCP), Databricks",
+          spokenLanguages:
+            "Idiomas: Español (Nativo), Inglés (Profesional), Francés (Básico)",
         },
         interests: {
           title: "Intereses",
@@ -273,25 +339,30 @@ i18n.use(initReactI18next).init({
         education: {
           title: "Educación y Certificaciones",
           uniandes: {
-            csDegree: "Título de pregrado en Ciencias de la Computación",
-            eeCoursework: "Cursos avanzados en Ingeniería Electrónica",
+            csDegree:
+              "Pregrado en Ciencias de la Computación (Ene 2021 -- Dic 2025, esperado)",
+            eeCoursework:
+              "Ingeniería Electrónica (75% créditos completados, Ene 2021 -- Dic 2023)",
           },
           tec: {
             exchangeProgram:
-              "Programa de Intercambio en Análisis de Datos e Inteligencia Artificial",
+              "Intercambio en Analítica de Datos e IA (Jul 2024 -- Dic 2024)",
           },
           certifications: {
-            deepLearning: "Fundamentos de Aprendizaje Profundo",
-            gcpFundamentals:
-              "Fundamentos de Computación en la Nube de Google Cloud",
+            deepLearning: "NVIDIA Fundamentos de Deep Learning",
+            gcpFundamentals: "Google Cloud Essentials",
             gcpDataMLAI:
               "Fundamentos de Computación en la Nube: Datos, ML e IA en Google Cloud",
             gcpInfrastructure:
-              "Fundamentos de Computación en la Nube: Infraestructura en Google Cloud",
+              "Tareas Fundamentales de Infraestructura en Google Cloud",
+            aiProductivity:
+              "Productividad con IA para Reimaginar tu Trabajo y Carrera",
+            promptEngineering:
+              "Prompt Engineering: Aprende a Hablar con IA Generativa",
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Abr 2023",
           },
-          viewCvButton: "Mira Mi CV Completo",
+          viewCvButton: "Ver mi CV Completo",
         },
         certifications: {
           issuedBy: "Emitido por",
@@ -302,98 +373,129 @@ i18n.use(initReactI18next).init({
           title: "Experiencia",
           straico: {
             date: "Mayo 2024 - Presente",
-            title: "Desarrollador de Software",
+            title: "Desarrollador de Software & Machine Learning Engineer",
             company: "Straico",
-            location: "Cheyenne, Wyoming, Estados Unidos (Remoto)",
+            location: "Estados Unidos (Remoto)",
             description: [
-              "Desarrollo de APIs: Diseño e implementación de APIs para facilitar la comunicación entre modelos de IA y aplicaciones web.",
-              "Desarrollo Front-End: Creación de interfaces amigables utilizando React, asegurando una experiencia de usuario intuitiva.",
-              "Desarrollo Back-End: Desarrollo de lógica robusta del lado del servidor para soportar funcionalidades de IA y procesamiento de datos.",
-              "Integración de IA: Implementación de modelos de lenguaje grandes (LLMs), procesamiento de lenguaje natural (NLP), generación aumentada por recuperación (RAG) y embeddings para mejorar las capacidades de las aplicaciones.",
-              "Despliegue de Microservicios: Implementación de arquitecturas de microservicios para mejorar la escalabilidad y mantenibilidad.",
+              "Ajuste fino de LLMs usando datasets específicos de dominio, mejorando la precisión en un 15%.",
+              "Desarrollo de implementaciones personalizadas de modelos, construyendo un sistema de optimización de prompts a partir de logs de chat.",
+              "Ingeniería de microservicios escalables con FastAPI y Node.js para pipelines de LLM y RAG, reduciendo la latencia en un 30%.",
+              "Diseño de pipelines CI/CD para entrenamiento y despliegue de modelos usando Docker, PM2 y Nginx en AWS EC2.",
+              "Despliegue de pipelines de TensorFlow optimizados para inferencia en producción (50ms de latencia, 200 req/s).",
+              "Colaboración con equipos frontend para integrar funcionalidades AI y dashboards (React/Next.js).",
+              "Monitoreo de despliegues ML en producción con AWS CloudWatch, GCP Monitoring y Prometheus para tolerancia a fallos.",
+            ],
+          },
+          hop: {
+            date: "Mar 2025 - Abr 2025",
+            title: "Desarrollador de Software & Ingeniero de IA (Medio Tiempo)",
+            company: "Hop",
+            location: "Estados Unidos (Remoto)",
+            description: [
+              "Desarrollo de agentes de IA para optimizar el engagement y screening de candidatos, mejorando la eficiencia.",
+              "Arquitectura de sistemas escalables integrando componentes de IA, canales en tiempo real y APIs de Slack/email/telefonía.",
+              "Construcción de servicios backend para procesar comandos de chat, emparejar perfiles y gestionar agendas con APIs REST seguras.",
+              "Diseño y gestión de bases de datos para almacenar datos y logs de candidatos, asegurando integridad y cumplimiento.",
+              "Ejecución de pruebas unitarias, de integración y E2E, estableciendo pipelines CI/CD y monitoreo.",
+              "Implementación de prácticas de seguridad: cifrado, autenticación y autorización.",
+              "Colaboración interequipos y documentación de código, APIs y arquitecturas.",
             ],
           },
           sinfonia: {
-            date: "Abr 2023 - Presente",
-            title: "Jefe de Investigación en Manipulación",
+            date: "Abr 2023 - Abr 2025",
+            title: "Líder de Investigación en IA y Robótica",
             company: "SinfonIA Uniandes",
-            location: "Bogotá, Distrito Capital, Colombia (Presencial)",
+            location: "Bogotá, Colombia",
             description: [
-              "Liderar un equipo de estudiantes de ingeniería talentosos para habilitar que los robots Pepper interactúen de manera efectiva con su entorno.",
-              "Aprovechar herramientas como ROS y MoveIt para desarrollar soluciones innovadoras que mejoren la funcionalidad y el rendimiento de los robots en entornos dinámicos.",
+              "Desarrollo de modelos para reconocimiento de voz, visión por computador y analítica predictiva usando ROS y MoveIt en robots Pepper, logrando reconocimiento internacional.",
+              "Diseño de pipelines de datos para recolectar, preprocesar y versionar datasets para entrenamiento supervisado y RL.",
+              "Integración de flujos ML en dashboards Angular para monitoreo y actualizaciones en tiempo real.",
+              "Liderazgo de equipo ganador en RoboCup @Home Social Standard Platform League 2024 (primer lugar internacional).",
             ],
           },
           oasis: {
             date: "Feb 2024 - Jun 2024",
             title: "Desarrollador de Aplicaciones XR",
             company: "Oasis",
-            location: "Bogotá, Distrito Capital, Colombia",
-            description: [],
+            location: "Bogotá, Colombia",
+            description: [
+              "Desarrollo de aplicaciones de entrenamiento en Unity/C# para equipos de emergencia, enfocadas en aprendizaje inmersivo.",
+              "Integración de tecnologías XR en flujos de producto con equipos interdisciplinarios.",
+            ],
           },
           ta1: {
-            date: "Ago 2022 - Dic 2023",
-            title: "Monitor Académico",
+            date: "Ene 2022 -- Dic 2023",
+            title: "Monitor Académico & Desarrollador Frontend",
             company: "Universidad de Los Andes",
-            location: "Bogotá, Distrito Capital, Colombia (Presencial)",
+            location: "Bogotá, Colombia",
             description: [
-              "Asistió a los instructores del curso en talleres, laboratorios y clases, guiando a los estudiantes, resolviendo consultas, revisando tareas, gestionando evaluaciones, transcribiendo notas y coordinando materiales.",
-              "Apoyó proyectos alineados con los Objetivos de Desarrollo Sostenible (ODS), ayudando a los estudiantes en la definición de problemas, metodologías y desarrollo de proyectos sostenibles.",
+              "Soporte en talleres, laboratorios y clases de Ingeniería Eléctrica, Robótica e IoT.",
+              "Instalación y mantenimiento de Ubuntu, ROS, PyTorch, CUDA y MoveIt para laboratorios de robótica.",
+              "Gestión de evaluaciones y soporte semanal a estudiantes.",
+              "Actualización del sitio web del departamento usando HTML, CSS y JavaScript.",
+              "Mejora de accesibilidad y usabilidad mediante buenas prácticas.",
             ],
           },
           ta2: {
-            date: "Jun 2023 - Jun 2023",
-            title: "Monitor Académico",
+            date: "Ago 2021 -- Dic 2021",
+            title: "Asistente de Investigación de Pregrado",
             company: "Universidad de Los Andes",
-            location: "Bogotá, Distrito Capital, Colombia (Presencial)",
+            location: "Bogotá, Colombia",
             description: [
-              "Apoyó a los instructores del curso en talleres, laboratorios y clases.",
-              "Facilitó la coordinación de equipos y lideró la instalación y mantenimiento de herramientas de software, incluyendo Ubuntu, ROS, PyTorch, Nvidia CUDA, TensorFlow, bibliotecas de cinemática inversa, CNN y MoveIt.",
+              "Apoyo en investigación sobre algoritmos de aprendizaje por refuerzo para robótica.",
+              "Desarrollo de entornos de simulación y análisis de resultados experimentales.",
+              "Colaboración con estudiantes de posgrado para publicación de resultados.",
             ],
           },
           ta3: {
-            date: "Ene 2022 - Jun 2022",
-            title: "Monitor Académico",
-            company: "Universidad de Los Andes",
-            location: "Bogotá, Distrito Capital, Colombia (Presencial)",
+            date: "Ene 2021 -- Jul 2021",
+            title: "Desarrollador de Software Junior (Prácticas)",
+            company: "TechNova Solutions",
+            location: "Bogotá, Colombia",
             description: [
-              "Asistió a los instructores del curso en talleres, laboratorios y clases, guiando a los estudiantes, resolviendo consultas, revisando tareas, gestionando evaluaciones, transcribiendo notas y coordinando materiales.",
-              "Colaboró con profesores de diversas áreas, involucrándose en tecnologías relacionadas con IoT de manera integral.",
+              "Soporte en el desarrollo de herramientas internas usando React y Node.js.",
+              "Participación en revisiones de código y ceremonias ágiles.",
+              "Contribución a la documentación y materiales de capacitación de usuarios.",
             ],
           },
           frontend: {
-            date: "Ene 2022 - Jun 2022",
-            title: "Desarrollador Frontend",
-            company: "Universidad de Los Andes",
-            location: "Bogotá, Distrito Capital, Colombia",
+            date: "Jul 2020 -- Dic 2020",
+            title: "Desarrollador Frontend Freelance",
+            company: "Freelance",
+            location: "Remoto",
             description: [
-              "Supervisó la gestión y actualizaciones del sitio web del departamento.",
-              "Las responsabilidades incluyeron publicación de contenido, desarrollo en HTML, CSS y JavaScript para la implementación de contenido, asegurando la funcionalidad y el mantenimiento del sitio web, mejorando la accesibilidad y la usabilidad del usuario.",
+              "Diseño e implementación de interfaces web responsivas para pequeños negocios.",
+              "Trabajo cercano con clientes para recopilar requerimientos y entregar soluciones.",
+              "Aseguramiento de compatibilidad entre navegadores y buenas prácticas de accesibilidad.",
             ],
           },
         },
         projects: {
           title: "Proyectos Destacados",
-          imagePlatform: {
-            title:
-              "Plataforma de Generación y Edición de Imágenes impulsada por IA",
+          aiAgentsPlatform: {
+            title: "Plataforma de Agentes de IA Personalizables",
             description:
-              "Una aplicación avanzada que utiliza Function Calling de OpenAI y la API de Ideogram para habilitar la generación inteligente de imágenes, edición especializada y descripciones detalladas. La plataforma incluye procesamiento contextual, generación automática de máscaras e integración fluida para flujos de trabajo escalables y eficientes impulsados por IA.",
+              "Sistema de orquestación de agentes ML. Diseño de pipelines modulares para ajuste fino y despliegue de LLMs según necesidades del usuario. Inferencia optimizada con batching y procesamiento asíncrono para millones de requests.",
+          },
+          imagePlatform: {
+            title: "Generación y Edición de Imágenes con IA",
+            description:
+              "Integración de OpenAI Function Calling con la API de Ideogram. Automatización de generación de máscaras y procesamiento contextual para resultados de alta fidelidad. API escalable desplegada en AWS Lambda y S3.",
           },
           smartTemplates: {
             title: "Aplicación de Plantillas Inteligentes",
             description:
-              "Esta aplicación detecta similitudes en las consultas de los usuarios y sugiere plantillas estructuradas para consultas relacionadas. Utiliza la API de OpenAI con embeddings para análisis y generación de plantillas, y un grafo para visualizar relaciones entre consultas similares.",
+              "Detecta similitudes en consultas de usuario y sugiere plantillas estructuradas. Utiliza la API de OpenAI con embeddings y un grafo para visualizar relaciones.",
           },
           sinfoniaWebsite: {
             title: "Sitio Web de SinfonIA",
             description:
-              "Un proyecto de desarrollo rápido y básico para el sitio web oficial de SinfonIA, creado utilizando Angular. Esta plataforma sirve como un centro para mostrar los proyectos del grupo, detalles del equipo y noticias. El sitio web apoyó la competición RoboCup 2024, proporcionando visibilidad a investigaciones en curso y actuando como un puente para quienes buscan conectarse con el grupo.",
+              "Desarrollo rápido y básico del sitio oficial de SinfonIA en Angular. Plataforma para mostrar proyectos, equipo y noticias. Apoyo a RoboCup 2024, visibilidad de investigación y puente para conexiones externas.",
           },
           pepperRobot: {
-            title:
-              "Implementación del Robot Pepper en Unity para Experiencias de Realidad Virtual",
+            title: "Implementación de Robot Pepper en Unity para VR",
             description:
-              "Se desarrolló una simulación virtual del robot Pepper dentro de Unity, integrando el Sistema Operativo de Robots (ROS). Este proyecto se enfoca en implementar tecnologías avanzadas de Realidad Virtual (VR) y Realidad Aumentada (AR). Al suscribirse a tópicos del robot mediante ROS, la simulación actúa como un gemelo digital, allanando el camino para aplicaciones innovadoras en VR y AR. El proyecto demuestra la fusión perfecta entre robótica y tecnologías inmersivas.",
+              "Simulación virtual del robot Pepper en Unity integrando ROS. Proyecto enfocado en VR/AR avanzada. La simulación actúa como gemelo digital, habilitando aplicaciones innovadoras en VR y AR.",
           },
         },
         footer: {

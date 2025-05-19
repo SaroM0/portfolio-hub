@@ -10,7 +10,7 @@ import straicoLogo from "../../../assets/ExperienceImages/straico.jpeg";
 import sinfoniaLogo from "../../../assets/ExperienceImages/sinfonia.jpeg";
 import electronicaLogo from "../../../assets/ExperienceImages/Electronic.jpeg";
 import oasisLogo from "../../../assets/ExperienceImages/Oasis.jpeg";
-
+import hopLogo from "../../../assets/ExperienceImages/hop.png";
 const Experience = () => {
   const { t } = useTranslation();
 
@@ -22,6 +22,15 @@ const Experience = () => {
       location: t("experience.straico.location"),
       description: t("experience.straico.description", { returnObjects: true }),
       icon: straicoLogo,
+      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+    },
+    {
+      date: t("experience.hop.date"),
+      title: t("experience.hop.title"),
+      company: t("experience.hop.company"),
+      location: t("experience.hop.location"),
+      description: t("experience.hop.description", { returnObjects: true }),
+      icon: hopLogo,
       iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
     },
     {
@@ -112,7 +121,10 @@ const Experience = () => {
                 {exp.location}
               </h4>
               <ul className="list-disc pl-5">
-                {exp.description.map((desc, i) => (
+                {(Array.isArray(exp.description)
+                  ? exp.description
+                  : [exp.description]
+                ).map((desc, i) => (
                   <li key={i} className="text-uiux-2">
                     {desc}
                   </li>
