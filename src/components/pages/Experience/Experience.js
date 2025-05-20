@@ -5,6 +5,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import "./Experience.css";
 
 import straicoLogo from "../../../assets/ExperienceImages/straico.jpeg";
 import sinfoniaLogo from "../../../assets/ExperienceImages/sinfonia.jpeg";
@@ -22,7 +23,10 @@ const Experience = () => {
       location: t("experience.straico.location"),
       description: t("experience.straico.description", { returnObjects: true }),
       icon: straicoLogo,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.hop.date"),
@@ -31,7 +35,10 @@ const Experience = () => {
       location: t("experience.hop.location"),
       description: t("experience.hop.description", { returnObjects: true }),
       icon: hopLogo,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.sinfonia.date"),
@@ -42,7 +49,10 @@ const Experience = () => {
         returnObjects: true,
       }),
       icon: sinfoniaLogo,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.oasis.date"),
@@ -51,7 +61,10 @@ const Experience = () => {
       location: t("experience.oasis.location"),
       description: t("experience.oasis.description", { returnObjects: true }),
       icon: oasisLogo,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.ta1.date"),
@@ -60,7 +73,10 @@ const Experience = () => {
       location: t("experience.ta1.location"),
       description: t("experience.ta1.description", { returnObjects: true }),
       icon: electronicaLogo,
-      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.ta2.date"),
@@ -69,7 +85,10 @@ const Experience = () => {
       location: t("experience.ta2.location"),
       description: t("experience.ta2.description", { returnObjects: true }),
       icon: electronicaLogo,
-      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.ta3.date"),
@@ -78,7 +97,10 @@ const Experience = () => {
       location: t("experience.ta3.location"),
       description: t("experience.ta3.description", { returnObjects: true }),
       icon: electronicaLogo,
-      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
     {
       date: t("experience.frontend.date"),
@@ -89,13 +111,16 @@ const Experience = () => {
         returnObjects: true,
       }),
       icon: electronicaLogo,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
     },
   ];
 
   return (
-    <section id="experience" className="py-20 bg-uiux-4 text-uiux-2">
-      <h2 className="font-bold">{t("experience.title")}</h2>
+    <section id="experience" className="py-20 bg-clr-bg text-clr-text-primary">
+      <h2>{t("experience.title")}</h2>
 
       <div className="container mx-auto px-4">
         <VerticalTimeline>
@@ -111,13 +136,16 @@ const Experience = () => {
                 />
               }
               iconStyle={exp.iconStyle}
-              contentStyle={{ background: "#121212", color: "#e0e0e0" }}
-              contentArrowStyle={{ borderRight: "7px solid #121212" }}
+              contentStyle={{
+                background: "var(--clr-bg)",
+                color: "var(--clr-text-primary)",
+              }}
+              contentArrowStyle={{ borderRight: "7px solid var(--clr-bg)" }}
             >
-              <h3 className="vertical-timeline-element-title text-uiux-1">
+              <h3 className="vertical-timeline-element-title text-clr-accent">
                 {exp.title} at {exp.company}
               </h3>
-              <h4 className="vertical-timeline-element-subtitle text-uiux-3">
+              <h4 className="vertical-timeline-element-subtitle text-clr-accent-subtle">
                 {exp.location}
               </h4>
               <ul className="list-disc pl-5">
@@ -125,7 +153,7 @@ const Experience = () => {
                   ? exp.description
                   : [exp.description]
                 ).map((desc, i) => (
-                  <li key={i} className="text-uiux-2">
+                  <li key={i} className="text-clr-text-primary">
                     {desc}
                   </li>
                 ))}

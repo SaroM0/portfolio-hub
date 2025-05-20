@@ -1,7 +1,8 @@
 .snap-section {
   scroll-snap-align: none;
   scroll-snap-type: none;
-  height: 110vh;
+  min-height: 110vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,43 +16,73 @@
 }
 
 .snap-section.experience-section {
-  height: 340vh;
+  height: auto;
   overflow: visible;
+}
+
+.snap-section-timeline {
+  scroll-snap-align: none;
+  scroll-snap-type: none;
+  min-height: 110vh;
+  height: auto;
+  overflow: visible;
+  display: block;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 @media (max-width: 1024px) {
   .snap-section {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 1rem;
   }
 
   .snap-section.experience-section {
-    height: 250vh;
+    padding: 1rem;
+  }
+
+  .snap-section-timeline {
+    min-height: 100vh;
+    height: auto;
     padding: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .snap-section {
-    height: 90vh;
+    min-height: 90vh;
+    height: auto;
     padding: 0.5rem;
   }
 
   .snap-section.experience-section {
-    height: 200vh;
+    height: auto;
+  }
+
+  .snap-section-timeline {
+    min-height: 90vh;
+    height: auto;
+    padding: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .snap-section {
-    height: auto;
     min-height: 80vh;
+    height: auto;
     padding: 0.5rem;
   }
 
   .snap-section.experience-section {
-    min-height: 395vh;
+    min-height: 0;
+    height: auto;
     padding: 0;
+  }
+
+  .snap-section-timeline {
+    min-height: 80vh;
+    height: auto;
+    padding: 0.5rem;
   }
 }
 

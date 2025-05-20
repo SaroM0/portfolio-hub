@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background-color: var(--bg-light);
+  background-color: var(--clr-surface);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
-  background-color: var(--bg-light);
+  background-color: var(--clr-surface);
   border-radius: 12px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,13 +27,20 @@
 
 .education-item,
 .certification-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px;
-  background-color: #252525;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--clr-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--clr-border);
+  transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1),
+    box-shadow 0.18s cubic-bezier(0.4, 2, 0.6, 1);
+  padding: 24px 20px;
+  margin-bottom: 18px;
+}
+
+.education-item:hover,
+.certification-item:hover {
+  transform: translateY(-4px) scale(1.025);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .education-header,
@@ -42,17 +49,41 @@
   align-items: center;
 }
 
-.institution-logo,
-.certification-logo {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  margin-right: 10px;
+.education-header h3,
+.certification-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+  margin: 0 0 0 8px;
 }
 
-.education-details p,
-.certification-details p {
-  margin: 5px 0;
+.certification-header h4 {
+  font-size: 1.1rem;
+}
+
+.institution-logo,
+.certification-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.certification-details p,
+.education-details p {
+  color: var(--clr-text-secondary);
+}
+
+.credential-link {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  font-size: 0.95rem;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.credential-link:hover {
+  color: var(--clr-accent-hover);
 }
 
 .view-cv-button-container {
@@ -63,19 +94,39 @@
 .view-cv-button {
   padding: 10px 20px;
   font-size: 1rem;
-  color: var(--bg-dark);
-  background-color: #252525;
+  color: var(--clr-bg);
+  background-color: var(--clr-accent-subtle);
   font-family: "Kanit", sans-serif;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 1s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .view-cv-button:hover {
-  background-color: #9f96d9;
+  background-color: var(--clr-accent-hover);
   transform: scale(1.05);
-  color: #e0e0e0;
+  color: var(--clr-text-primary);
+}
+
+.cert-icon {
+  color: var(--clr-accent);
+  margin-right: 8px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .education-certifications-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .education-item,
+  .certification-item {
+    padding: 18px 8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -119,4 +170,10 @@
     font-size: 0.8rem;
     padding: 6px 12px;
   }
+}
+
+.skills-container,
+.interests-container {
+  background-color: var(--clr-accent-subtle);
+  color: var(--clr-bg);
 }

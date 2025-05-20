@@ -15,7 +15,7 @@ importers:
         specifier: ^6.7.1
         version: 6.7.2
       '@fortawesome/free-solid-svg-icons':
-        specifier: ^6.7.1
+        specifier: ^6.7.2
         version: 6.7.2
       '@fortawesome/react-fontawesome':
         specifier: ^0.2.2
@@ -77,6 +77,9 @@ importers:
       react-scripts:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.27.1))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.27.1))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.2.0)(type-fest@0.21.3)(typescript@4.9.5)
+      react-scrollama:
+        specifier: ^2.4.1
+        version: 2.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-tooltip:
         specifier: ^5.28.0
         version: 5.28.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -5232,6 +5235,15 @@ packages:
     peerDependencies:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
 
+  react-intersection-observer@9.16.0:
+    resolution: {integrity: sha512-w9nJSEp+DrW9KmQmeWHQyfaP6b03v+TdXynaoA964Wxt7mdR3An11z4NNCQgL4gKSK7y1ver2Fq+JKH6CWEzUA==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -5286,6 +5298,13 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  react-scrollama@2.4.1:
+    resolution: {integrity: sha512-+JRasIzzjRkd+uMAL9YHXmy4zOT2Eujo2dtrmx+3pZAB0/z+krAaVwZIQ/ERX3eOzyP4VDfcdQg3QvRcvNPzJg==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.2 || ^18.2.0 || ^19.0.0
+      react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0 || ^19.0.0
 
   react-tooltip@5.28.1:
     resolution: {integrity: sha512-ZA4oHwoIIK09TS7PvSLFcRlje1wGZaxw6xHvfrzn6T82UcMEfEmHVCad16Gnr4NDNDh93HyN037VK4HDi5odfQ==}
@@ -12510,6 +12529,12 @@ snapshots:
     dependencies:
       react: 18.2.0
 
+  react-intersection-observer@9.16.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+    optionalDependencies:
+      react-dom: 18.2.0(react@18.2.0)
+
   react-is@16.13.1: {}
 
   react-is@17.0.2: {}
@@ -12643,6 +12668,12 @@ snapshots:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+
+  react-scrollama@2.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-intersection-observer: 9.16.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
   react-tooltip@5.28.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:

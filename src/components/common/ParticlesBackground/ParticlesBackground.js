@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticleComponent = () => {
+const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    console.log("ParticlesBackground mounted");
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
@@ -17,104 +18,55 @@ const ParticleComponent = () => {
     init && (
       <Particles
         id="tsparticles"
+        style={{ position: "absolute", inset: 0, zIndex: 0 }}
         options={{
+          background: { color: "var(--clr-bg)" },
+
           particles: {
-            number: {
-              value: 100,
-              density: {
-                enable: true,
-                area: 1000,
-              },
-            },
+            number: { value: 70, density: { enable: true, area: 900 } },
+
+            /* Latte shades with higher opacity */
             color: {
-              value: ["#e0e0e0", "#fafafa"],
+              value: [
+                "rgba(240,231,216,0.9)",
+                "rgba(240,231,216,0.6)",
+                "rgba(220,203,180,0.5)",
+              ],
             },
+
             shape: {
               type: "circle",
-              stroke: {
-                width: 0,
-                color: "#fff",
-              },
-              polygon: {
-                nb_sides: 5,
-              },
+              stroke: { width: 0, color: "transparent" },
             },
-            opacity: {
-              value: 0.6,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 0.1,
-                opacity_min: 0.1,
-                sync: false,
-              },
-            },
+
+            opacity: { value: 0.7, random: true }, // visible but not glaring
+
             size: {
-              value: 2,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 1,
-                size_min: 0.1,
-                sync: false,
-              },
+              value: { min: 0.5, max: 3 },
+              random: { enable: true },
+              anim: { enable: true },
             },
+
             links: {
               enable: true,
-              distance: 120,
-              color: "#ffffff",
-              opacity: 0.4,
+              distance: 180,
+              color: "rgba(220,203,180,0.25)", // thin latte lines
+              opacity: 0.35,
               width: 1,
             },
+
             move: {
               enable: true,
-              speed: 1,
-              direction: "none",
-              random: false,
-              straight: false,
-              outModes: {
-                default: "bounce",
-              },
+              speed: 0.6,
+              outModes: { default: "bounce" },
             },
           },
+
           interactivity: {
-            detect_on: "canvas",
-            events: {
-              onHover: {
-                enable: true,
-                mode: "grab",
-              },
-              onClick: {
-                enable: false,
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 140,
-                links: {
-                  opacity: 1,
-                },
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-              push: {
-                quantity: 4,
-              },
-              remove: {
-                quantity: 2,
-              },
-            },
+            events: { onHover: { enable: true, mode: "grab" }, resize: true },
+            modes: { grab: { distance: 140, links: { opacity: 0.5 } } },
           },
+
           detectRetina: true,
         }}
       />
@@ -122,4 +74,4 @@ const ParticleComponent = () => {
   );
 };
 
-export default ParticleComponent;
+export default ParticlesBackground;

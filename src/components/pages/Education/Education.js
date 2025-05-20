@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import EducationItem from "./EducationItem";
 import CertificationItem from "./CertificationItem";
@@ -8,15 +8,8 @@ import gcpLogo from "../../../assets/CertificationImages/googleCloud.png";
 
 import "./Education.css";
 
-const cvPdf = "/Rodriguez_Santiago_CV.pdf";
-
 const Education = () => {
-  const [showPdf, setShowPdf] = useState(false);
   const { t } = useTranslation();
-
-  const handleShowPdf = () => {
-    window.open(cvPdf, "_blank");
-  };
 
   return (
     <div className="education-section">
@@ -49,38 +42,77 @@ const Education = () => {
         <div className="certifications-items">
           <CertificationItem
             logo={nvidiaLogo}
-            title={t("education.certifications.deepLearning")}
+            title={t(
+              "education.certifications.deepLearning",
+              "NVIDIA Fundamentals of Deep Learning"
+            )}
             issuer="NVIDIA"
-            issueDate={t("education.certifications.issueDateFeb2024")}
+            issueDate={t(
+              "education.certifications.issueDateFeb2024",
+              "Feb 2024"
+            )}
             credentialUrl="https://courses.nvidia.com/certificates/dd5a388c5b604cc5ad2482b2f7472edd/"
           />
           <CertificationItem
             logo={gcpLogo}
-            title={t("education.certifications.gcpFundamentals")}
+            title={t(
+              "education.certifications.gcpFundamentals",
+              "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud"
+            )}
             issuer="Google Cloud Skills Boost"
-            issueDate={t("education.certifications.issueDateApr2023")}
-            credentialUrl="https://www.cloudskillsboost.google/public_profiles/3417147"
-          />
-          <CertificationItem
-            logo={gcpLogo}
-            title={t("education.certifications.gcpDataMLAI")}
-            issuer="Google Cloud Skills Boost"
-            issueDate={t("education.certifications.issueDateApr2023")}
+            issueDate={t(
+              "education.certifications.issueDateApr2023",
+              "Apr 2023"
+            )}
             credentialUrl="https://www.cloudskillsboost.google/public_profiles/3432343"
           />
           <CertificationItem
             logo={gcpLogo}
-            title={t("education.certifications.gcpInfrastructure")}
+            title={t(
+              "education.certifications.gcpEssentials",
+              "Google Cloud Essentials"
+            )}
             issuer="Google Cloud Skills Boost"
-            issueDate={t("education.certifications.issueDateApr2023")}
+            issueDate={t(
+              "education.certifications.issueDateApr2023",
+              "Apr 2023"
+            )}
+            credentialUrl="https://www.cloudskillsboost.google/public_profiles/3417147"
+          />
+          <CertificationItem
+            logo={gcpLogo}
+            title={t(
+              "education.certifications.gcpInfrastructure",
+              "Perform Foundational Infrastructure Tasks in Google Cloud"
+            )}
+            issuer="Google Cloud Skills Boost"
+            issueDate={t(
+              "education.certifications.issueDateApr2023",
+              "Apr 2023"
+            )}
             credentialUrl="https://www.cloudskillsboost.google/public_profiles/3427403"
           />
+          <CertificationItem
+            logo={gcpLogo}
+            title={t(
+              "education.certifications.productivityAI",
+              "Productivity Tricks with AI to Reimagine Your Workday and Career"
+            )}
+            issuer="LinkedIn Learning"
+            issueDate={t("education.certifications.issueDate2024", "2024")}
+            credentialUrl="https://www.linkedin.com/learning/certificates/your-certificate-url"
+          />
+          <CertificationItem
+            logo={gcpLogo}
+            title={t(
+              "education.certifications.promptEngineering",
+              "Prompt Engineering: Learn to Speak with Generative AI"
+            )}
+            issuer="LinkedIn Learning"
+            issueDate={t("education.certifications.issueDate2024", "2024")}
+            credentialUrl="https://www.linkedin.com/learning/certificates/your-certificate-url"
+          />
         </div>
-      </div>
-      <div className="view-cv-button-container">
-        <button onClick={handleShowPdf} className="view-cv-button">
-          {t("education.viewCvButton")}
-        </button>
       </div>
     </div>
   );

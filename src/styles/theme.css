@@ -1,0 +1,15 @@
+:root {
+  /* Grayscale core */
+  --clr-bg: #111213; /* Midnight */
+  --clr-surface: #1f2022; /* Slate Foam */
+  --clr-border: #2c2d2e; /* Graphite Line */
+
+  /* Typography */
+  --clr-text-primary: #f0e7d8; /* Foam Latte */
+  --clr-text-secondary: #cfc8ba; /* Almond Mist */
+
+  /* Accents */
+  --clr-accent: #dccbb4; /* Latte Cream */
+  --clr-accent-hover: #e9dbc5; /* Latte Froth */
+  --clr-accent-subtle: #b8a892; /* Oat Edge */
+}

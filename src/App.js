@@ -7,7 +7,7 @@ import Experience from "./components/pages/Experience/Experience";
 import Projects from "./components/pages/Projects/Projects";
 import Footer from "./components/pages/Footer/Footer";
 
-import Section from "./components/common/Section/Section";
+import Section, { TimelineSection } from "./components/common/Section/Section";
 import ScrollToTop from "./components/common/SrollToTop/ScrollToTop";
 import FloatingWindow from "./components/common/FloatingWindow/FloatingWindow";
 
@@ -42,9 +42,9 @@ function App() {
           <Section id="education">
             <Education />
           </Section>
-          <Section id="experience" className="snap-section experience-section">
+          <TimelineSection id="experience">
             <Experience />
-          </Section>
+          </TimelineSection>
           <Section id="projects">
             <Projects />
           </Section>

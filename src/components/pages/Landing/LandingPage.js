@@ -6,7 +6,7 @@ import "./Landing.css";
 
 function LandingPage() {
   return (
-    <div id="landing" className="landing">
+    <div id="landing" className="landing-page">
       <ParticlesBackground />
       <Hero />
       <SocialMedia />

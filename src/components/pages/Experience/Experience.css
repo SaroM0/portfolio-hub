@@ -1,12 +1,13 @@
 .vertical-timeline::before {
-  background: #8e58da;
+  background: var(--clr-accent-subtle);
 }
 
 .vertical-timeline-element-content {
-  background: #121212;
-  color: #e0e0e0;
+  background: var(--clr-bg);
+  color: var(--clr-text-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .vertical-timeline-element-content::before {
-  border-right: 7px solid #121212;
+  border-right: 7px solid var(--clr-bg);
 }

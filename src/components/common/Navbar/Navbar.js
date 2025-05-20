@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
   const { t, i18n } = useTranslation();

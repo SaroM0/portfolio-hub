@@ -39,4 +39,12 @@ const Section = ({ id, children, className = "" }) => {
   );
 };
 
+export const TimelineSection = ({ id, children, className = "" }) => {
+  return (
+    <div id={id} className={`snap-section-timeline ${className}`}>
+      {children}
+    </div>
+  );
+};
+
 export default Section;

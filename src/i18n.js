@@ -23,6 +23,7 @@ i18n.use(initReactI18next).init({
         },
         about: {
           title: "About Me",
+          downloadCV: "Download CV",
         },
         bio: {
           paragraph1:
@@ -287,6 +288,7 @@ i18n.use(initReactI18next).init({
         },
         about: {
           title: "Sobre Mí",
+          downloadCV: "Descargar CV",
         },
         bio: {
           paragraph1:

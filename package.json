@@ -5,7 +5,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
-    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@react-pdf/renderer": "^4.1.5",
     "@testing-library/jest-dom": "^5.17.0",
@@ -26,6 +26,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "react-scrollama": "^2.4.1",
     "react-tooltip": "^5.28.0",
     "react-vertical-timeline-component": "^3.6.0",
     "tsparticles": "^3.7.1",

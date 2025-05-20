@@ -11,8 +11,19 @@ function About() {
   return (
     <section className="about-me-container">
       <div className="about-me-left">
-        <h2>{t("about.title")}</h2>
+        <h2 className="about-title">{t("about.title")}</h2>
         <Bio />
+        <div className="download-cv">
+          <a
+            href="/Rodriguez_Santiago_CV.pdf"
+            className="download-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            {t("about.downloadCV")}
+          </a>
+        </div>
       </div>
       <div className="about-me-right">
         <Skills />

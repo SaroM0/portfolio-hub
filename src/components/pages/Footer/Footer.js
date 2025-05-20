@@ -44,11 +44,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="footer bg-uiux-4 text-uiux-2">
-        <div className="footer-section availability-message">
-          <h3>{t("footer.availability.title")}</h3>
-          <p>{t("footer.availability.description")}</p>
-        </div>
+      <div className="footer bg-clr-surface text-clr-text-primary">
         <div className="footer-section footer-right">
           <Carousel
             responsive={responsive}
@@ -68,8 +64,6 @@ const Footer = () => {
         </div>
         <div className="footer-section contact-info">
           <h3>{t("footer.contact.title")}</h3>
-          <p>{t("footer.contact.email")}: s.rodriguezm2@uniandes.edu.co</p>
-          <p>{t("footer.contact.phone")}: +57 321 286 0273</p>
           <div className="social-links">
             <a
               href="https://www.linkedin.com/in/santiago-rodriguez-mora-5b2a17267"
@@ -119,10 +113,11 @@ const Footer = () => {
       </div>
       <div className="footer-section copyright-section text-center">
         <p className="text-sm text-gray-500">
-          {t("footer.copyright")} Santiago Rodriguez {t("footer.technologies")}
+          {t("footer.copyright")} Santiago {t("footer.technologies")}
         </p>
         <p className="text-xs text-gray-400 mt-2">
-          © 2024 Santiago Rodriguez. {t("footer.rightsReserved")}
+          © {new Date().getFullYear()} Santiago Rodriguez.{" "}
+          {t("footer.rightsReserved")}
         </p>
       </div>
     </footer>
