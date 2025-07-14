@@ -5,7 +5,7 @@ const Bio = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bio-container fade-in">
+    <div className="bio-container">
       <div className="bio-content">
         <p>{t("bio.paragraph1")}</p>
         <p>{t("bio.paragraph2")}</p>

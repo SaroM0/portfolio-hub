@@ -286,6 +286,7 @@ i18n.use(initReactI18next).init({
             email: "Email",
             phone: "Phone",
           },
+          motto: "We have the responsibility to design the future of artificial intelligence and deploy its potential with rigor and purpose",
           testimonials: {
             testimonial1: {
               name: "Arturo Henao",
@@ -589,7 +590,8 @@ i18n.use(initReactI18next).init({
             email: "Correo",
             phone: "Teléfono",
           },
-          testimonials: {
+            motto: "Tenemos la responsabilidad de diseñar el futuro de la inteligencia artificial y desplegar su potencial con rigor y propósito",
+            testimonials: {
             testimonial1: {
               name: "Arturo Henao",
               position: "CEO/Founder",

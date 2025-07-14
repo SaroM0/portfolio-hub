@@ -61,10 +61,6 @@ const Skills = () => {
             <FontAwesomeIcon icon={faRobot} className="skill-icon" />{" "}
             {t("skills.machineLearning")}
           </li>
-          <li>
-            <FontAwesomeIcon icon={faRobot} className="skill-icon" />{" "}
-            {t("skills.robotics")}
-          </li>
         </ul>
       </div>
     </div>

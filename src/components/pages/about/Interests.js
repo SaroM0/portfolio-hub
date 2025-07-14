@@ -12,7 +12,7 @@ const Interests = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="interests-container interest-card">
+    <div className="interests-container">
       <h2>{t("interests.title")}</h2>
       <ul>
         <li>

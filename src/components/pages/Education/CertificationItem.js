@@ -9,16 +9,8 @@ const CertificationItem = ({
   issuer,
   issueDate,
   credentialUrl,
-  validityPeriod,
 }) => {
   const { t } = useTranslation();
-
-  const getTooltipText = () => {
-    if (validityPeriod) {
-      return `Valid for ${validityPeriod}`;
-    }
-    return "No expiration date";
-  };
 
   return (
     <div className="certification-item">
@@ -30,7 +22,7 @@ const CertificationItem = ({
         <p>
           {t("certifications.issuedBy")}: {issuer}
         </p>
-        <p className="tooltip" data-tooltip={getTooltipText()}>
+        <p>
           {t("certifications.issueDate")}: {issueDate}
         </p>
         {credentialUrl && credentialUrl !== "#" && (

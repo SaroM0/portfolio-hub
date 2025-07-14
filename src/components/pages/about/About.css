@@ -1,85 +1,213 @@
+/* === GRID & LAYOUT === */
 .about-me-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  padding: 50px;
-  margin: 0 auto;
-  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 32px;
+  margin: 32px auto 0 auto;
+  position: relative;
+  min-height: 70vh;
+  max-width: 1200px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.about-me-left,
-.about-me-right {
-  flex: 1;
+@media (min-width: 1440px) {
+  .about-me-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
-.about-me-left {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media (max-width: 1440px) {
+  .about-me-container {
+    grid-template-columns: 6fr 6fr;
+    max-width: 1100px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-width: 1200px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 800px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .about-me-container::after {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .bio-container,
+  .skills-container,
+  .interests-container,
+  .skill-card {
+    padding: 20px 12px;
+  }
+}
+@media (max-width: 768px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0 0;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-me-left,
+  .about-me-right {
+    padding: 8px;
+    gap: 12px;
+  }
+  .download-cv {
+    margin-top: 20px;
+  }
+  .download-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .about-me-container {
+    margin: 0;
+    gap: 12px;
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-me-left,
+  .about-me-right {
+    padding: 4px;
+  }
+  .bio-container,
+  .skills-container,
+  .interests-container,
+  .skill-card {
+    padding: 12px 4px;
+  }
+  .download-button {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
 }
 
-.about-me-right {
-  background: var(--clr-surface);
-  border-radius: 18px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
-  padding: 32px 24px;
-}
-
-.bio-container {
-  margin-bottom: 40px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: var(--clr-surface);
-  color: var(--clr-text-primary);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.08);
-}
-
-.bio-content {
-  max-width: 1000px;
-}
-
-.bio-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: justify;
-}
-
+/* === CARD STYLES (Bio, Skills, Interests) === */
+.bio-container,
 .skills-container,
 .interests-container {
-  margin-bottom: 40px;
-  padding: 0;
-  border-radius: 0;
-  background: none;
+  background: var(--clr-surface);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--clr-border);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 28px 24px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
   color: var(--clr-text-primary);
-  box-shadow: none;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
+.bio-container::before,
+.skills-container::before,
+.interests-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent-subtle));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.bio-container:hover,
+.skills-container:hover,
+.interests-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.bio-container:hover::before,
+.skills-container:hover::before,
+.interests-container:hover::before {
+  opacity: 1;
+}
+
+.bio-container:focus-within,
+.skills-container:focus-within,
+.interests-container:focus-within {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
+}
+
+/* === TITLES === */
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: var(--clr-accent);
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+}
+
+.skills-content h3,
+.interests-container h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+  margin-bottom: 12px;
+  font-family: "DM Serif Display", serif;
+}
+
+/* === SKILLS & INTERESTS LAYOUT === */
 .skills-content {
   display: flex;
-  gap: 24px;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.skills-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.skill-card {
+  margin-bottom: 0;
+  background: var(--clr-surface);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--clr-border);
+  padding: 20px 18px;
+  position: relative;
+  overflow: hidden;
+  color: var(--clr-text-primary);
 }
 
+/* === LISTS === */
 .skills-content ul,
 .interests-container ul {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 0;
+  margin: 0;
 }
 
 .skills-content li,
 .interests-container li {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
+  color: var(--clr-text-primary);
 }
 
 .skills-content li::before,
@@ -91,170 +219,81 @@
   font-size: 1.2em;
 }
 
-@media (max-width: 900px) {
-  .skills-content {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .about-me-right {
-    padding: 0;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-  }
+/* === INTERESTS CONTRAST === */
+.interests-container {
+  color: var(--clr-text-primary);
 }
 
+/* === BUTTON === */
 .download-cv {
-  margin-top: 32px;
-  text-align: left;
+  text-align: center;
+  margin-top: 18px;
 }
 
 .download-button {
   display: inline-block;
   padding: 12px 28px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--clr-bg);
-  background: linear-gradient(
-    90deg,
-    var(--clr-accent) 60%,
-    var(--clr-accent-hover) 100%
-  );
-  border: 2px solid var(--clr-accent);
-  border-radius: 16px;
+  background: var(--clr-accent);
+  border: none;
+  border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-  transition: background 0.3s, color 0.3s, transform 0.2s, border-color 0.2s;
-  letter-spacing: 0.5px;
+  transition: background 0.18s cubic-bezier(0.4,0,0.2,1), color 0.18s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: none;
+  letter-spacing: 0.2px;
 }
 
-.download-button:hover {
-  background: linear-gradient(
-    90deg,
-    var(--clr-accent-hover) 60%,
-    var(--clr-accent) 100%
-  );
-  color: var(--clr-text-primary);
-  text-decoration: underline;
-  transform: scale(1.09);
-  border-color: var(--clr-accent-hover);
+.download-button:hover, .download-button:focus {
+  background: var(--clr-accent-hover);
+  color: var(--clr-bg);
+  outline: none;
 }
 
-.about-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 32px;
-  color: var(--clr-accent);
-  letter-spacing: 1px;
-}
-
-.skill-card,
-.interest-card {
-  background: linear-gradient(135deg, #232325 80%, var(--clr-surface) 100%);
-  color: var(--clr-text-primary);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
-  border-radius: 18px;
-  padding: 28px 22px;
-  margin-bottom: 24px;
-  border: 1.5px solid var(--clr-accent);
-  transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1),
-    box-shadow 0.18s cubic-bezier(0.4, 2, 0.6, 1),
-    border-color 0.18s cubic-bezier(0.4, 2, 0.6, 1);
-}
-
-.skill-card:hover,
-.interest-card:hover {
-  transform: translateY(-8px) scale(1.045);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
-  border-color: var(--clr-accent-hover);
-}
-
-.skill-icon {
-  margin-right: 10px;
-  color: var(--clr-accent);
-  font-size: 1.15em;
-  vertical-align: middle;
-}
-
-.interest-card ul {
-  padding-left: 0;
-}
-
-.interest-card li {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  padding-left: 0;
-}
-
-@media (max-width: 768px) {
-  .about-me-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 24px 8px;
-  }
-  .about-me-left,
-  .about-me-right {
-    width: 100%;
-    flex: unset;
-    margin-bottom: 24px;
-  }
-  .download-cv {
-    text-align: center;
-  }
-  .skill-card,
-  .interest-card {
-    margin-bottom: 18px;
-    padding: 18px 8px;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.9s cubic-bezier(0.4, 2, 0.6, 1);
-}
-
-@keyframes fadeIn {
+/* === ANIMATIONS === */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bio-container { animation-delay: 0.1s; }
+.skills-container { animation-delay: 0.2s; }
+.interests-container { animation-delay: 0.3s; }
+.skill-card:nth-child(1) { animation-delay: 0.4s; }
+.skill-card:nth-child(2) { animation-delay: 0.5s; }
+
+/* === RESPONSIVE === */
+@media (prefers-contrast: high) {
+  .bio-container,
+  .skills-container,
+  .interests-container,
+  .skill-card {
+    border: 2px solid var(--clr-text-primary);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bio-container,
+  .skills-container,
+  .interests-container,
+  .skill-card {
+    animation: none;
+  }
+  .bio-container:hover,
+  .skills-container:hover,
+  .interests-container:hover,
+  .skill-card:hover {
+    transform: none;
+  }
+  .download-button:hover {
     transform: none;
   }
 }
 
-.interests-container.interest-card {
-  background: linear-gradient(135deg, #232325 80%, var(--clr-surface) 100%);
-  color: var(--clr-text-primary);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32);
-  border-radius: 18px;
-  padding: 28px 22px;
-  border: 1.5px solid var(--clr-accent);
-  transition: transform 0.18s cubic-bezier(0.4, 2, 0.6, 1),
-    box-shadow 0.18s cubic-bezier(0.4, 2, 0.6, 1),
-    border-color 0.18s cubic-bezier(0.4, 2, 0.6, 1);
-}
 
-.interests-container.interest-card:hover {
-  transform: translateY(-8px) scale(1.045);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
-  border-color: var(--clr-accent-hover);
-}
-
-.about-title,
-.skills-content h3,
-.interests-container h2 {
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
-.bio-content,
-.skills-content,
-.interests-container {
-  font-family: "DM Sans", sans-serif;
-}

@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #2a2b2c;
+  background-color: var(--clr-surface);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -31,7 +31,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  background-color: #2a2b2c;
+  background-color: var(--clr-surface);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -39,7 +39,7 @@
 
 .education-item,
 .certification-item {
-  background: var(--clr-bg);
+  background: var(--clr-surface);
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   border: 1px solid var(--clr-border);
@@ -131,7 +131,7 @@
 }
 
 .certification-details p:not(:first-child) {
-  color: #d4cbb8;
+  color: var(--clr-text-secondary);
   font-size: 0.85rem;
 }
 
@@ -150,7 +150,7 @@
 
 .credential-link:hover {
   color: var(--clr-accent-hover);
-  background-color: rgba(220, 203, 180, 0.1);
+  background-color: rgba(220, 203, 180, 0.15);
 }
 
 .credential-link:focus {
@@ -185,8 +185,8 @@
 }
 
 .progress-badge.not-completed {
-  background-color: #6b7280;
-  color: #f9fafb;
+  background-color: var(--clr-border);
+  color: var(--clr-text-primary);
 }
 
 .tooltip {
@@ -235,6 +235,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  font-weight: 600;
 }
 
 .view-cv-button:hover {
@@ -409,6 +410,7 @@
 
 .skills-container,
 .interests-container {
-  background-color: var(--clr-accent-subtle);
-  color: var(--clr-bg);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-top: 8px;
 }
