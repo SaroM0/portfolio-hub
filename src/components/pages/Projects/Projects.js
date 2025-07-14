@@ -39,44 +39,48 @@ const projects = [
   },
 ];
 
+const ProjectCard = ({ project }) => (
+  <article className="project-card">
+    <header className="project-header">
+      <h3 className="project-title">{project.title}</h3>
+      <time className="project-year">{project.year}</time>
+    </header>
+
+    <p className="project-summary">{project.summary}</p>
+
+    <ul className="tech-badges" aria-label="Technologies used">
+      {project.tech.map((tech) => (
+        <li key={tech} className="tech-badge">
+          {tech}
+        </li>
+      ))}
+    </ul>
+
+    {/* Whole card clickable via overlay link for accessibility */}
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="github-link"
+      aria-label={`Open ${project.title} repository on GitHub`}
+    >
+      <FontAwesomeIcon icon={faGithub} />
+    </a>
+  </article>
+);
+
+/* ————— Section ————— */
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
     <section id="projects" className="py-20 bg-clr-bg text-clr-text-primary">
       <h2 className="projects-title">{t("projects.title")}</h2>
-      <div className="container mx-auto px-6">
-        <div className="projects-container">
-          {projects.map((project, index) => (
-            <div key={index} className="project-item modern-project-card">
-              <div className="project-header">
-                <h3 className="text-clr-accent-subtle project-title">
-                  {project.title}
-                </h3>
-                <span className="project-year">{project.year}</span>
-              </div>
-              <div className="project-details">
-                <p className="project-summary">{project.summary}</p>
-                <div className="tech-badges">
-                  {project.tech.map((tech, i) => (
-                    <span key={i} className="tech-badge">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="github-link"
-                  aria-label="GitHub Repository"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+
+      <div className="projects-container">
+        {projects.map((proj) => (
+          <ProjectCard key={proj.title} project={proj} />
+        ))}
       </div>
     </section>
   );
