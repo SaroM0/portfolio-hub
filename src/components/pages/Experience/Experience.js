@@ -10,12 +10,22 @@ import "./Experience.css";
 import straicoLogo from "../../../assets/ExperienceImages/straico.jpeg";
 import sinfoniaLogo from "../../../assets/ExperienceImages/sinfonia.jpeg";
 import electronicaLogo from "../../../assets/ExperienceImages/Electronic.jpeg";
-import oasisLogo from "../../../assets/ExperienceImages/Oasis.jpeg";
-import hopLogo from "../../../assets/ExperienceImages/hop.png";
 const Experience = () => {
   const { t } = useTranslation();
 
   const experiences = [
+    {
+      date: t("experience.paipol.date"),
+      title: t("experience.paipol.title"),
+      company: t("experience.paipol.company"),
+      location: t("experience.paipol.location"),
+      description: t("experience.paipol.description", { returnObjects: true }),
+      icon: straicoLogo,
+      iconStyle: {
+        background: "var(--clr-accent)",
+        color: "var(--clr-text-primary)",
+      },
+    },
     {
       date: t("experience.straico.date"),
       title: t("experience.straico.title"),
@@ -28,18 +38,7 @@ const Experience = () => {
         color: "var(--clr-text-primary)",
       },
     },
-    {
-      date: t("experience.hop.date"),
-      title: t("experience.hop.title"),
-      company: t("experience.hop.company"),
-      location: t("experience.hop.location"),
-      description: t("experience.hop.description", { returnObjects: true }),
-      icon: hopLogo,
-      iconStyle: {
-        background: "var(--clr-accent)",
-        color: "var(--clr-text-primary)",
-      },
-    },
+
     {
       date: t("experience.sinfonia.date"),
       title: t("experience.sinfonia.title"),
@@ -55,23 +54,11 @@ const Experience = () => {
       },
     },
     {
-      date: t("experience.oasis.date"),
-      title: t("experience.oasis.title"),
-      company: t("experience.oasis.company"),
-      location: t("experience.oasis.location"),
-      description: t("experience.oasis.description", { returnObjects: true }),
-      icon: oasisLogo,
-      iconStyle: {
-        background: "var(--clr-accent)",
-        color: "var(--clr-text-primary)",
-      },
-    },
-    {
-      date: t("experience.ta1.date"),
-      title: t("experience.ta1.title"),
-      company: t("experience.ta1.company"),
-      location: t("experience.ta1.location"),
-      description: t("experience.ta1.description", { returnObjects: true }),
+      date: t("teaching.electrical.date"),
+      title: t("teaching.electrical.title"),
+      company: t("teaching.electrical.institution"),
+      location: "Bogotá, Colombia",
+      description: t("teaching.electrical.description", { returnObjects: true }),
       icon: electronicaLogo,
       iconStyle: {
         background: "var(--clr-accent)",
@@ -79,11 +66,11 @@ const Experience = () => {
       },
     },
     {
-      date: t("experience.ta2.date"),
-      title: t("experience.ta2.title"),
-      company: t("experience.ta2.company"),
-      location: t("experience.ta2.location"),
-      description: t("experience.ta2.description", { returnObjects: true }),
+      date: t("teaching.robotics.date"),
+      title: t("teaching.robotics.title"),
+      company: t("teaching.robotics.institution"),
+      location: "Bogotá, Colombia",
+      description: t("teaching.robotics.description", { returnObjects: true }),
       icon: electronicaLogo,
       iconStyle: {
         background: "var(--clr-accent)",
@@ -91,31 +78,18 @@ const Experience = () => {
       },
     },
     {
-      date: t("experience.ta3.date"),
-      title: t("experience.ta3.title"),
-      company: t("experience.ta3.company"),
-      location: t("experience.ta3.location"),
-      description: t("experience.ta3.description", { returnObjects: true }),
+      date: t("teaching.society.date"),
+      title: t("teaching.society.title"),
+      company: t("teaching.society.institution"),
+      location: "Bogotá, Colombia",
+      description: t("teaching.society.description", { returnObjects: true }),
       icon: electronicaLogo,
       iconStyle: {
         background: "var(--clr-accent)",
         color: "var(--clr-text-primary)",
       },
     },
-    {
-      date: t("experience.frontend.date"),
-      title: t("experience.frontend.title"),
-      company: t("experience.frontend.company"),
-      location: t("experience.frontend.location"),
-      description: t("experience.frontend.description", {
-        returnObjects: true,
-      }),
-      icon: electronicaLogo,
-      iconStyle: {
-        background: "var(--clr-accent)",
-        color: "var(--clr-text-primary)",
-      },
-    },
+
   ];
 
   return (

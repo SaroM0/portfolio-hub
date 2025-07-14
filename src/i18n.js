@@ -14,12 +14,12 @@ i18n.use(initReactI18next).init({
         },
         hero: {
           greeting: "Hi there!",
-          introFull: "My name is Santiago, a passionate ",
-          introPart: "My name is Santiago,",
+          introFull: "I'm Santiago, a passionate ",
+          introPart: "I'm Santiago,",
           passionatePart: "a passionate ",
-          dynamicWords: ["Developer", "Researcher", "Engineer", "Human"],
+          dynamicWords: ["Senior Developer", "AI Engineer", "ML Architect", "Researcher"],
           description:
-            "Driven by a passion for artificial intelligence, programming, and lifelong learning, I strive to innovate, enhance, and contribute to the world through groundbreaking AI applications and research.",
+            "Senior Software Developer & AI/ML Engineer with 5+ years of full-stack Python/React JS experience, including 3+ years integrating Generative AI and machine learning, and a proven track record of delivering end-to-end pipelines that improved inference latency by 30% and boosted model F1-score by 12%.",
         },
         about: {
           title: "About Me",
@@ -27,7 +27,7 @@ i18n.use(initReactI18next).init({
         },
         bio: {
           paragraph1:
-            "Results-driven Machine Learning Engineer and Computer Science Student with 2+ years of experience designing, training, fine-tuning, and deploying ML models at scale. Skilled in end-to-end ML pipelines, data engineering, feature extraction, model selection, prompt optimization, and production deployment on AWS, GCP, Azure, and Databricks. Strong background in NLP, computer vision, reinforcement learning, and big-data analytics. Proven ability to translate research into robust, high-performance solutions for enterprise environments. Excellent leadership, cross-functional collaboration, and bilingual (English/Spanish) communication skills.",
+            "Senior Software Developer & AI/ML Engineer with 5+ years of full-stack Python/React JS experience, including 3+ years integrating Generative AI and machine learning, and a proven track record of delivering end-to-end pipelines that improved inference latency by 30% and boosted model F1-score by 12%. Adept at transforming data-intensive prototypes into secure, low-latency cloud workloads and leading cross-functional teams from concept through production.",
           paragraph2:
             "I thrive in dynamic environments, excelling both independently and as part of diverse teams to bring innovative projects to life. My curiosity drives me to master new tools and concepts, ensuring I'm always ready to tackle emerging challenges. Passionate about MLOps, scalable architectures, and delivering business value through AI.",
           paragraph3:
@@ -44,21 +44,18 @@ i18n.use(initReactI18next).init({
           crossFunctional: "Cross-Functional Collaboration",
           communication: "Bilingual Communication (English/Spanish)",
           technicalSkillsTitle: "Technical Skills",
-          fullStackDevelopment: "Full Stack Development",
-          apiDevelopment: "API Development",
-          databaseManagement: "Database Management",
-          robotics: "Robotics",
-          mlops:
-            "MLOps & Deployment (AWS, GCP, Azure, Docker, Kubernetes, PM2, Nginx, Databricks)",
-          programming:
-            "Programming: Python, Java, JavaScript/TypeScript, C/C++, SQL, NoSQL",
-          frameworks:
-            "Frameworks & Tools: FastAPI, Node.js, React/Next.js, Git, Postman, VS Code, ROS",
           machineLearning:
-            "Machine Learning, NLP, Computer Vision, RAG, Prompt Engineering, AI Agents",
-          deepLearning:
-            "Deep Learning: PyTorch, TensorFlow, CNNs, RNNs, Transformers, RL",
-          bigData: "Big Data: BigQuery (GCP), Databricks",
+            "Machine Learning & Deep Learning: PyTorch, TensorFlow, scikit-learn, LoRA/QLoRA & parameter-efficient fine-tuning, embedding models, instruction & prompt engineering, model evaluation & monitoring",
+          generativeAI:
+            "Generative AI & Model Development: Retrieval-Augmented Generation (RAG), LLM APIs, LlamaIndex, LangChain, LangGraph, AWS Bedrock",
+          cloudMLOps:
+            "Cloud & MLOps (AWS): S3, SageMaker, Glue, Redshift, Lambda, ECS/EKS, Step Functions, IAM, Aurora, RDS, Lake Formation, Kinesis, Docker, Kubernetes, GitHub Actions, GitLab CI/CD",
+          dataLifecycle:
+            "Data Lifecycle & Engineering: Data collection, cleansing, filtering, labeling; Apache Airflow orchestration; Redis, PostgreSQL",
+          fullStackDevelopment:
+            "Full-Stack Development: React, Next.js, NestJS, Node.js (TypeScript), Python (FastAPI, Flask), GraphQL",
+          servingDeployment:
+            "Serving & Deployment: vLLM, TGI, NVIDIA Device Plugin",
           spokenLanguages:
             "Languages: Spanish (Native), English (Full Professional), French (Elementary)",
         },
@@ -77,25 +74,21 @@ i18n.use(initReactI18next).init({
           title: "Education & Certifications",
           uniandes: {
             csDegree:
-              "B.S. in Computer Science (Jan 2021 -- Dec 2025, Expected)",
+              "B.S. Computer Science (In Progress)",
             eeCoursework:
-              "Electronic Engineering (75% credits completed, Jan 2021 -- Dec 2023)",
+              "Electronic Engineering (Not Completed)",
           },
           tec: {
             exchangeProgram:
-              "Exchange Program in Data Analytics & AI (Jul 2024 -- Dec 2024)",
+              "Minor in Data Analytics & AI Tools (Aug 2024 -- Dec 2024)",
           },
           certifications: {
-            deepLearning: "NVIDIA Fundamentals of Deep Learning",
-            gcpFundamentals: "Google Cloud Essentials",
-            gcpDataMLAI:
-              "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud",
-            gcpInfrastructure:
-              "Perform Foundational Infrastructure Tasks in Google Cloud",
-            aiProductivity:
-              "Productivity Tricks with AI to Reimagine Your Workday and Career",
-            promptEngineering:
-              "Prompt Engineering: Learn to Speak with Generative AI",
+            llmCustomization: "Efficient Large Language Model (LLM) Customization",
+            generativeAI: "Introducing Generative AI with AWS",
+            promptEngineering: "Prompt Engineering and AI Productivity",
+            deepLearning: "Fundamentals of Deep Learning",
+            gcpDataMLAI: "Google Cloud Foundations: Data, ML & AI",
+            gcpFundamentals: "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Apr 2023",
           },
@@ -106,21 +99,67 @@ i18n.use(initReactI18next).init({
           issueDate: "Issue date",
           viewCredential: "View Credential",
         },
+        honors: {
+          title: "Honors & Awards",
+          robocup: "First Place — RoboCup @Home Social SPL (2024)",
+        },
+        teaching: {
+          title: "Teaching Assistance",
+          electrical: {
+            title: "Introduction to Electrical & Electronic Engineering",
+            date: "Aug 2022 -- Dec 2023",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Guided workshops, resolved doubts, reviewed assignments, and transcribed notes.",
+              "Advised SDG-aligned student projects on problem definition and implementation.",
+            ],
+          },
+          robotics: {
+            title: "Robotics Learning",
+            date: "Jun 2023",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Installed/maintained Ubuntu+ROS, PyTorch, CUDA, TensorFlow, CNNs, MoveIt for robotics labs.",
+              "Led computer vision and NLP exercises on robots.",
+            ],
+          },
+          society: {
+            title: "Society 5.0",
+            date: "Jan 2022 -- Jun 2022",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Assisted labs on sensors, databases, benchmarking, and data transmission.",
+              "Coordinated materials and meetings across departments.",
+            ],
+          },
+        },
         experience: {
           title: "Experience",
+          paipol: {
+            date: "Jan 2025 -- Present",
+            title: "Senior Full-Stack Developer & AI / ML Architect",
+            company: "Paipol (Straico Brand)",
+            location: "United States (Remote)",
+            description: [
+              "Led product vision and architecture, delivering a scalable platform as senior technical lead.",
+              "Designed three-tier data stack (MySQL RDS, MongoDB, Pinecone) with a modular NestJS backend.",
+              "Implemented hybrid agent framework synthesizing facts from SQL, NoSQL, and vector stores (90% answer accuracy, 45% reduction in response time).",
+              "Streamlined fine-tuning workflows, reducing inference latency by 30% and improving model F1-score by 12%.",
+              "Engineered data processing pipelines with 99%+ reliability, including a Discord crawler.",
+              "Collaborated with founders to refine scope, translate business needs, and guide roadmap execution.",
+            ],
+          },
           straico: {
-            date: "May 2024 - Present",
-            title: "Software Developer & AI Machine Learning Engineer",
+            date: "Oct 2024 -- Present",
+            title: "Senior Full-Stack Developer & AI / ML Engineer",
             company: "Straico",
             location: "United States (Remote)",
             description: [
-              "Fine-tuned LLMs using domain-specific datasets to improve accuracy by 15%.",
-              "Developed custom model implementations leveraging chat logs to build a prompt-optimization system, enhancing relevancy.",
-              "Engineered scalable microservices with FastAPI and Node.js to wrap LLM and RAG pipelines, reducing latency by 30%.",
-              "Designed CI/CD pipelines for model training and deployment using Docker, PM2, and Nginx on AWS EC2.",
-              "Deployed TensorFlow pipelines optimized production inference with 50ms latency and 200 requests/sec throughput.",
-              "Collaborated with frontend teams to integrate AI-driven features and dashboards (React/Next.js).",
-              "Monitored production ML deployments with AWS CloudWatch, GCP Monitoring, and Prometheus for fault tolerance.",
+              "Deployed Python microservices on AWS EC2 via gRPC/REST, exposing multi-agent API.",
+              "Published n8n-nodes-straico-official for no-code workflow automation.",
+              "Built multi-stage optimizer combining heuristic rewrites & fine-tuned adapters (+18% relevance).",
+              "Led MongoDB migrations and CI/CD setup with 99.9% uptime on AWS.",
+              "Developed dashboards and cohort analyses to track acquisition and retention.",
             ],
           },
           hop: {
@@ -139,15 +178,15 @@ i18n.use(initReactI18next).init({
             ],
           },
           sinfonia: {
-            date: "Apr 2023 - Apr 2025",
-            title: "Lead for AI & Robotics Research",
+            date: "Apr 2023 -- Apr 2025",
+            title: "AI & Robotics Research Team Lead",
             company: "SinfonIA Uniandes",
             location: "Bogotá, Colombia",
             description: [
-              "Developed models for speech recognition, computer vision, and predictive analytics leveraging ROS and MoveIt on Pepper robots, leading to international recognition.",
-              "Designed data pipelines to collect, preprocess, and version datasets for supervised and RL training.",
-              "Integrated ML workflows into Angular dashboards for real-time monitoring and updates.",
-              "Led team to victory at RoboCup @Home Social Standard Platform League 2024, securing first place in international competition.",
+              "Researched and developed pipelines for social-robotics interactions.",
+              "Explored algorithms for perception and object recognition.",
+              "Designed and evaluated models in dynamic environments.",
+              "Implemented speech-to-text and text-to-speech for human–robot dialogue.",
             ],
           },
           oasis: {
@@ -278,13 +317,13 @@ i18n.use(initReactI18next).init({
           introPart: "Me llamo Santiago,",
           passionatePart: "un apasionado ",
           dynamicWords: [
-            "Desarrollador",
+            "Desarrollador Senior",
+            "Ingeniero de IA",
+            "Arquitecto ML",
             "Investigador",
-            "Ingeniero",
-            "Humano",
           ],
           description:
-            "Impulsado por la pasión por la inteligencia artificial, la programación y el aprendizaje continuo, me esfuerzo por innovar, mejorar y contribuir al mundo mediante aplicaciones y investigaciones revolucionarias de IA.",
+            "Desarrollador Senior de Software e Ingeniero de IA/ML con más de 5 años de experiencia full-stack en Python/React JS, incluyendo 3+ años integrando IA Generativa y aprendizaje automático, con un historial comprobado de entregar pipelines de extremo a extremo que mejoraron la latencia de inferencia en un 30% y aumentaron el F1-score del modelo en un 12%.",
         },
         about: {
           title: "Sobre Mí",
@@ -292,7 +331,7 @@ i18n.use(initReactI18next).init({
         },
         bio: {
           paragraph1:
-            "Ingeniero de Machine Learning y estudiante de Ciencias de la Computación orientado a resultados, con más de 2 años de experiencia diseñando, entrenando, ajustando y desplegando modelos de ML a escala. Experto en pipelines de ML de extremo a extremo, ingeniería de datos, extracción de características, selección de modelos, optimización de prompts y despliegue en producción en AWS, GCP, Azure y Databricks. Sólida formación en PLN, visión por computador, aprendizaje por refuerzo y análisis de big data. Capacidad demostrada para traducir investigación en soluciones robustas y de alto rendimiento para entornos empresariales. Excelentes habilidades de liderazgo, colaboración interdisciplinaria y comunicación bilingüe (inglés/español).",
+            "Desarrollador Senior de Software e Ingeniero de IA/ML con más de 5 años de experiencia full-stack en Python/React JS, incluyendo 3+ años integrando IA Generativa y aprendizaje automático, con un historial comprobado de entregar pipelines de extremo a extremo que mejoraron la latencia de inferencia en un 30% y aumentaron el F1-score del modelo en un 12%. Experto en transformar prototipos intensivos en datos en cargas de trabajo en la nube seguras y de baja latencia, liderando equipos multifuncionales desde el concepto hasta la producción.",
           paragraph2:
             "Me desenvuelvo en entornos dinámicos, destacando tanto de forma independiente como en equipos diversos para llevar a cabo proyectos innovadores. Mi curiosidad me impulsa a dominar nuevas herramientas y conceptos, asegurando estar siempre listo para enfrentar desafíos emergentes. Apasionado por MLOps, arquitecturas escalables y la entrega de valor de negocio a través de IA.",
           paragraph3:
@@ -309,23 +348,20 @@ i18n.use(initReactI18next).init({
           crossFunctional: "Colaboración Interdisciplinaria",
           communication: "Comunicación Bilingüe (Inglés/Español)",
           technicalSkillsTitle: "Habilidades Técnicas",
-          fullStackDevelopment: "Desarrollo Full Stack",
-          apiDevelopment: "Desarrollo de APIs",
-          databaseManagement: "Gestión de Bases de Datos",
-          robotics: "Robótica",
-          mlops:
-            "MLOps y Despliegue (AWS, GCP, Azure, Docker, Kubernetes, PM2, Nginx, Databricks)",
-          programming:
-            "Programación: Python, Java, JavaScript/TypeScript, C/C++, SQL, NoSQL",
-          frameworks:
-            "Frameworks y Herramientas: FastAPI, Node.js, React/Next.js, Git, Postman, VS Code, ROS",
           machineLearning:
-            "Machine Learning, PLN, Visión por Computador, RAG, Prompt Engineering, Agentes de IA",
-          deepLearning:
-            "Deep Learning: PyTorch, TensorFlow, CNNs, RNNs, Transformers, RL",
-          bigData: "Big Data: BigQuery (GCP), Databricks",
+            "Machine Learning y Deep Learning: PyTorch, TensorFlow, scikit-learn, LoRA/QLoRA y fine-tuning eficiente de parámetros, modelos de embeddings, ingeniería de instrucciones y prompts, evaluación y monitoreo de modelos",
+          generativeAI:
+            "IA Generativa y Desarrollo de Modelos: Retrieval-Augmented Generation (RAG), APIs de LLM, LlamaIndex, LangChain, LangGraph, AWS Bedrock",
+          cloudMLOps:
+            "Cloud y MLOps (AWS): S3, SageMaker, Glue, Redshift, Lambda, ECS/EKS, Step Functions, IAM, Aurora, RDS, Lake Formation, Kinesis, Docker, Kubernetes, GitHub Actions, GitLab CI/CD",
+          dataLifecycle:
+            "Ciclo de Vida de Datos e Ingeniería: Recopilación, limpieza, filtrado, etiquetado de datos; orquestación con Apache Airflow; Redis, PostgreSQL",
+          fullStackDevelopment:
+            "Desarrollo Full-Stack: React, Next.js, NestJS, Node.js (TypeScript), Python (FastAPI, Flask), GraphQL",
+          servingDeployment:
+            "Servicio y Despliegue: vLLM, TGI, NVIDIA Device Plugin",
           spokenLanguages:
-            "Idiomas: Español (Nativo), Inglés (Profesional), Francés (Básico)",
+            "Idiomas: Español (Nativo), Inglés (Profesional completo), Francés (Básico)",
         },
         interests: {
           title: "Intereses",
@@ -344,23 +380,19 @@ i18n.use(initReactI18next).init({
             csDegree:
               "Pregrado en Ciencias de la Computación (Ene 2021 -- Dic 2025, esperado)",
             eeCoursework:
-              "Ingeniería Electrónica (75% créditos completados, Ene 2021 -- Dic 2023)",
+              "Ingeniería Electrónica (75% completado, Ene 2021 -- Dic 2023)",
           },
           tec: {
             exchangeProgram:
-              "Intercambio en Analítica de Datos e IA (Jul 2024 -- Dic 2024)",
+              "Minor en Analítica de Datos e Herramientas de IA (Ago 2024 -- Dic 2024)",
           },
           certifications: {
-            deepLearning: "NVIDIA Fundamentos de Deep Learning",
-            gcpFundamentals: "Google Cloud Essentials",
-            gcpDataMLAI:
-              "Fundamentos de Computación en la Nube: Datos, ML e IA en Google Cloud",
-            gcpInfrastructure:
-              "Tareas Fundamentales de Infraestructura en Google Cloud",
-            aiProductivity:
-              "Productividad con IA para Reimaginar tu Trabajo y Carrera",
-            promptEngineering:
-              "Prompt Engineering: Aprende a Hablar con IA Generativa",
+            llmCustomization: "Personalización Eficiente de Modelos de Lenguaje de Gran Escala (LLM) – NVIDIA (2025)",
+            generativeAI: "Introducción a la IA Generativa con AWS - Udacity (2025)",
+            promptEngineering: "Prompt Engineering y Productividad con IA – LinkedIn Learning (2024)",
+            deepLearning: "Fundamentos de Deep Learning – NVIDIA (2024)",
+            gcpDataMLAI: "Fundamentos de Google Cloud: Datos, ML e IA – Google Cloud (2023)",
+            gcpFundamentals: "Fundamentos de Computación en la Nube de Google Cloud: Fundamentos de Computación en la Nube – Google Cloud Skills Boost (2023)",
             issueDateFeb2024: "Feb 2024",
             issueDateApr2023: "Abr 2023",
           },
@@ -371,21 +403,67 @@ i18n.use(initReactI18next).init({
           issueDate: "Fecha de emisión",
           viewCredential: "Ver Credencial",
         },
+        honors: {
+          title: "Honores y Premios",
+          robocup: "Primer Lugar — RoboCup @Home Social SPL (2024)",
+        },
+        teaching: {
+          title: "Asistencia Docente",
+          electrical: {
+            title: "Introducción a la Ingeniería Eléctrica y Electrónica",
+            date: "Ago 2022 -- Dic 2023",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Guié talleres, resolví dudas, revisé tareas y transcribí notas.",
+              "Asesoré proyectos estudiantiles alineados con los ODS en definición de problemas e implementación.",
+            ],
+          },
+          robotics: {
+            title: "Aprendizaje de Robótica",
+            date: "Jun 2023",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Instalé/mantuve Ubuntu+ROS, PyTorch, CUDA, TensorFlow, CNNs, MoveIt para laboratorios de robótica.",
+              "Lideré ejercicios de visión por computador y PLN en robots.",
+            ],
+          },
+          society: {
+            title: "Sociedad 5.0",
+            date: "Ene 2022 -- Jun 2022",
+            institution: "Universidad de Los Andes",
+            description: [
+              "Asistí laboratorios sobre sensores, bases de datos, benchmarking y transmisión de datos.",
+              "Coordiné materiales y reuniones entre departamentos.",
+            ],
+          },
+        },
         experience: {
           title: "Experiencia",
+          paipol: {
+            date: "Ene 2025 -- Presente",
+            title: "Desarrollador Full-Stack Senior & Arquitecto de IA / ML",
+            company: "Paipol (Marca Straico)",
+            location: "Estados Unidos (Remoto)",
+            description: [
+              "Lideré la visión del producto y arquitectura, entregando una plataforma escalable como líder técnico senior.",
+              "Diseñé un stack de datos de tres niveles (MySQL RDS, MongoDB, Pinecone) con un backend modular NestJS.",
+              "Implementé un framework de agentes híbridos que sintetiza hechos de SQL, NoSQL y vector stores (90% precisión, 45% reducción en tiempo de respuesta).",
+              "Optimicé flujos de fine-tuning, reduciendo la latencia de inferencia en 30% y mejorando el F1-score del modelo en 12%.",
+              "Diseñé pipelines de procesamiento de datos con 99%+ confiabilidad, incluyendo un crawler de Discord.",
+              "Colaboré con fundadores para refinar el alcance, traducir necesidades del negocio y guiar la ejecución del roadmap.",
+            ],
+          },
           straico: {
-            date: "Mayo 2024 - Presente",
-            title: "Desarrollador de Software & Machine Learning Engineer",
+            date: "Oct 2024 -- Presente",
+            title: "Desarrollador Full-Stack Senior & Ingeniero de IA / ML",
             company: "Straico",
             location: "Estados Unidos (Remoto)",
             description: [
-              "Ajuste fino de LLMs usando datasets específicos de dominio, mejorando la precisión en un 15%.",
-              "Desarrollo de implementaciones personalizadas de modelos, construyendo un sistema de optimización de prompts a partir de logs de chat.",
-              "Ingeniería de microservicios escalables con FastAPI y Node.js para pipelines de LLM y RAG, reduciendo la latencia en un 30%.",
-              "Diseño de pipelines CI/CD para entrenamiento y despliegue de modelos usando Docker, PM2 y Nginx en AWS EC2.",
-              "Despliegue de pipelines de TensorFlow optimizados para inferencia en producción (50ms de latencia, 200 req/s).",
-              "Colaboración con equipos frontend para integrar funcionalidades AI y dashboards (React/Next.js).",
-              "Monitoreo de despliegues ML en producción con AWS CloudWatch, GCP Monitoring y Prometheus para tolerancia a fallos.",
+              "Desplegué microservicios Python en AWS EC2 vía gRPC/REST, exponiendo API multi-agente.",
+              "Publiqué n8n-nodes-straico-official para automatización de flujos sin código.",
+              "Construí optimizador multi-etapa combinando reescritura heurística y adaptadores fine-tuned (+18% relevancia).",
+              "Lideré migraciones MongoDB y configuración CI/CD con 99.9% uptime en AWS.",
+              "Desarrollé dashboards y análisis de cohortes para rastrear adquisición y retención.",
             ],
           },
           hop: {
@@ -404,15 +482,15 @@ i18n.use(initReactI18next).init({
             ],
           },
           sinfonia: {
-            date: "Abr 2023 - Abr 2025",
-            title: "Líder de Investigación en IA y Robótica",
+            date: "Abr 2023 -- Abr 2025",
+            title: "Líder de Equipo de Investigación en IA y Robótica",
             company: "SinfonIA Uniandes",
             location: "Bogotá, Colombia",
             description: [
-              "Desarrollo de modelos para reconocimiento de voz, visión por computador y analítica predictiva usando ROS y MoveIt en robots Pepper, logrando reconocimiento internacional.",
-              "Diseño de pipelines de datos para recolectar, preprocesar y versionar datasets para entrenamiento supervisado y RL.",
-              "Integración de flujos ML en dashboards Angular para monitoreo y actualizaciones en tiempo real.",
-              "Liderazgo de equipo ganador en RoboCup @Home Social Standard Platform League 2024 (primer lugar internacional).",
+              "Investigué y desarrollé pipelines para interacciones de robótica social.",
+              "Exploré algoritmos para percepción y reconocimiento de objetos.",
+              "Diseñé y evalué modelos en ambientes dinámicos.",
+              "Implementé speech-to-text y text-to-speech para diálogo humano-robot.",
             ],
           },
           oasis: {

@@ -10,6 +10,7 @@ import {
   faGithub,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import arturoImage from "../../../assets/ReferencesImages/arturo.jpeg";
@@ -66,7 +67,7 @@ const Footer = () => {
           <h3>{t("footer.contact.title")}</h3>
           <div className="social-links">
             <a
-              href="https://www.linkedin.com/in/santiago-rodriguez-mora-5b2a17267"
+              href="https://www.linkedin.com/in/santiago-rodriguez-5b2a17267"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -93,7 +94,16 @@ const Footer = () => {
               <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
-              href="mailto:s.rodriguezm2@uniandes.edu.co?subject=Contact&body=I%20am%20excited%20to%20collaborate%20with%20you.%20Let's%20create%20something%20amazing!"
+              href="https://santiagorm.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label="Website"
+            >
+              <FontAwesomeIcon icon={faGlobe} />
+            </a>
+            <a
+              href="mailto:rodriguezmorasantiago@gmail.com?subject=Contact&body=I%20am%20excited%20to%20collaborate%20with%20you.%20Let's%20create%20something%20amazing!"
               className="social-icon"
               aria-label="Email"
             >

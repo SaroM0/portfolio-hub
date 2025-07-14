@@ -6,6 +6,14 @@ import "./Projects.css";
 
 const projects = [
   {
+    title: "Robust Prompt-to-SQL Generation Framework",
+    year: "In Progress",
+    summary:
+      "5,000 real-world business-domain queries with annotated SQL. GPT-3.5-turbo & LangGraph-based RAG pipeline. Achieved 95% exact-match accuracy on a 1,000-sample test set, reducing hallucination rate by 45%.",
+    tech: ["Python", "GPT-3.5-turbo", "LangGraph", "RAG", "SQL"],
+    github: "https://github.com/SaroM0/prompt-to-sql-framework",
+  },
+  {
     title: "Customizable AI Agents Platform",
     year: 2024,
     summary:
@@ -28,14 +36,6 @@ const projects = [
       "Speech recognition, computer vision, and predictive analytics for Pepper robots. Led team to 1st place at RoboCup @Home 2024.",
     tech: ["Python", "ROS", "MoveIt", "Angular", "Pepper Robot"],
     github: "https://github.com/SaroM0/sinfonia-website",
-  },
-  {
-    title: "XR Training App for Emergency Responders",
-    year: 2024,
-    summary:
-      "Unity/C# application for immersive emergency response training, integrating XR technologies for enhanced learning.",
-    tech: ["Unity", "C#", "XR"],
-    github: "https://github.com/SaroM0/pepper-robot-vr",
   },
 ];
 
