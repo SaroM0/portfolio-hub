@@ -1,0 +1,144 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── Left ── */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-tagline {
+  font-size: 1.05rem;
+  color: var(--clr-text-primary);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.contact-available {
+  font-size: 0.9rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.65;
+}
+
+.contact-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+}
+
+.contact-status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--clr-text-secondary);
+}
+
+.contact-status-open-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--clr-text-muted);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Right ── */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Ask AI card */
+.contact-ask-ai-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-accent);
+  border-top: 2px solid var(--clr-accent);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.contact-ask-ai-icon {
+  font-size: 1.5rem;
+}
+
+.contact-ask-ai-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+}
+
+.contact-ask-ai-desc {
+  font-size: 0.87rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.6;
+}
+
+/* Contact links */
+.contact-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--clr-border-subtle);
+  color: var(--clr-text-secondary);
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.contact-link:first-child { border-top: 1px solid var(--clr-border-subtle); }
+
+.contact-link:hover { color: var(--clr-text-primary); }
+
+.contact-link-icon {
+  color: var(--clr-accent);
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-link-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  flex: 1;
+}
+
+.contact-link-arrow {
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+  transition: color 0.15s, transform 0.15s;
+}
+
+.contact-link:hover .contact-link-arrow {
+  color: var(--clr-accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

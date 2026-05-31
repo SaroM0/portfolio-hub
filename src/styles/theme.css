@@ -1,15 +1,47 @@
 :root {
-  /* Grayscale core */
-  --clr-bg: #111213; /* Midnight */
-  --clr-surface: #1f2022; /* Slate Foam */
-  --clr-border: #2c2d2e; /* Graphite Line */
+  /* Base surfaces */
+  --clr-bg:             #0d0e0f;
+  --clr-bg-secondary:   #111213;
+  --clr-surface:        #161718;
+  --clr-surface-raised: #1c1d1e;
+  --clr-border:         #242526;
+  --clr-border-subtle:  #1a1b1c;
 
   /* Typography */
-  --clr-text-primary: #f0e7d8; /* Foam Latte */
-  --clr-text-secondary: #cfc8ba; /* Almond Mist */
+  --clr-text-primary:   #f0e7d8;
+  --clr-text-secondary: #9a9082;
+  --clr-text-muted:     #5a5550;
 
-  /* Accents */
-  --clr-accent: #dccbb4; /* Latte Cream */
-  --clr-accent-hover: #e9dbc5; /* Latte Froth */
-  --clr-accent-subtle: #b8a892; /* Oat Edge */
+  /* Accent — latte cream */
+  --clr-accent:         #dccbb4;
+  --clr-accent-hover:   #e9dbc5;
+  --clr-accent-dim:     rgba(220, 203, 180, 0.10);
+  --clr-accent-subtle:  #b8a892;
+
+  /* Status */
+  --clr-status-active:     #6db87a;
+  --clr-status-active-dim: rgba(109, 184, 122, 0.15);
+
+  /* Research accent (clinical/academic context) */
+  --clr-research:     #7bafc4;
+  --clr-research-dim: rgba(123, 175, 196, 0.12);
+
+  /* Fonts — set by next/font in layout.js */
+  --font-sans: var(--font-inter, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+  --font-mono: var(--font-mono-jb, 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace);
+
+  /* Layout */
+  --nav-height:    64px;
+  --content-width: 1100px;
+  --content-pad:   2rem;
+
+  /* Easing */
+  --ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --content-pad: 1.25rem;
+  }
 }

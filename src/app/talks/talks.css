@@ -1,0 +1,128 @@
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.talk-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.talk-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.talk-lang {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+
+.talk-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+  line-height: 1.35;
+}
+
+.talk-event {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--clr-accent-subtle);
+  letter-spacing: 0.04em;
+}
+
+.talk-desc {
+  font-size: 0.87rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.talk-footer {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--clr-border-subtle);
+}
+
+.talk-no-media {
+  font-size: 0.65rem;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Teaching section ── */
+.teaching-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--clr-border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.teaching-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--clr-border);
+  transition: border-color 0.2s;
+}
+
+.teaching-item:hover {
+  border-left-color: var(--clr-accent-subtle);
+}
+
+.teaching-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.teaching-course {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-text-primary);
+}
+
+.teaching-date {
+  font-size: 0.7rem;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.teaching-institution {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--clr-accent-subtle);
+  letter-spacing: 0.04em;
+}
+
+.teaching-desc {
+  font-size: 0.85rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .talks-grid {
+    grid-template-columns: 1fr;
+  }
+  .teaching-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
