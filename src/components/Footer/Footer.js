@@ -6,11 +6,11 @@ import { faLinkedin, faGithub, faInstagram, faWhatsapp } from '@fortawesome/free
 import './Footer.css';
 
 const SOCIALS = [
-  { href: 'https://www.linkedin.com/in/santiago-rodriguez-5b2a17267', icon: faLinkedin, label: 'LinkedIn' },
-  { href: 'https://github.com/SaroM0',                                icon: faGithub,   label: 'GitHub' },
-  { href: 'mailto:rodriguezmorasantiago@gmail.com',                   icon: faEnvelope, label: 'Email' },
-  { href: 'https://wa.me/573212860273',                               icon: faWhatsapp, label: 'WhatsApp' },
-  { href: 'https://santiagorm.dev',                                   icon: faGlobe,    label: 'Website' },
+  { href: 'https://www.linkedin.com/in/santiago-rodriguez-mora', icon: faLinkedin, label: 'LinkedIn' },
+  { href: 'https://github.com/SaroM0',                            icon: faGithub,   label: 'GitHub' },
+  { href: 'mailto:rodriguezmorasantiago@gmail.com',               icon: faEnvelope, label: 'Email' },
+  { href: 'https://wa.me/573212860273',                           icon: faWhatsapp, label: 'WhatsApp' },
+  { href: 'https://www.santiagorm.dev',                           icon: faGlobe,    label: 'Website' },
 ];
 
 export default function Footer() {

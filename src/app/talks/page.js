@@ -67,7 +67,7 @@ export default function TalksPage() {
       <div className="page-wrap">
         <header className="section-header">
           <span className="section-label">{t('talks.sectionLabel')}</span>
-          <h2 className="section-title">{t('talks.sectionTitle')}</h2>
+          <h1 className="section-title">{t('talks.sectionTitle')}</h1>
           <div className="section-divider" />
         </header>
 

@@ -104,10 +104,10 @@ const item = {
 };
 
 const SOCIALS = [
-  { href: 'https://www.linkedin.com/in/santiago-rodriguez-5b2a17267', icon: faLinkedin, label: 'LinkedIn' },
-  { href: 'https://github.com/SaroM0',                                icon: faGithub,   label: 'GitHub' },
-  { href: 'mailto:rodriguezmorasantiago@gmail.com',                   icon: faEnvelope, label: 'Email' },
-  { href: 'https://santiagorm.dev',                                   icon: faGlobe,    label: 'Website' },
+  { href: 'https://www.linkedin.com/in/santiago-rodriguez-mora', icon: faLinkedin, label: 'LinkedIn' },
+  { href: 'https://github.com/SaroM0',                            icon: faGithub,   label: 'GitHub' },
+  { href: 'mailto:rodriguezmorasantiago@gmail.com',               icon: faEnvelope, label: 'Email' },
+  { href: 'https://www.santiagorm.dev',                           icon: faGlobe,    label: 'Website' },
   { href: 'https://www.instagram.com/sa.rdz/',                        icon: faInstagram,label: 'Instagram' },
 ];
 
@@ -148,7 +148,7 @@ export default function HomePage() {
         <motion.h1 variants={item} className="hero-name">
           Santiago
           <br />
-          Rodríguez
+          Rodríguez Mora
         </motion.h1>
 
         {/* Positioning statement */}

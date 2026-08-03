@@ -16,7 +16,7 @@ const LINKS = [
   {
     icon: faLinkedin,
     label: 'linkedin.com/in/santiago-rodriguez-mora',
-    href: 'https://www.linkedin.com/in/santiago-rodriguez-5b2a17267',
+    href: 'https://www.linkedin.com/in/santiago-rodriguez-mora',
   },
   {
     icon: faGithub,
@@ -26,7 +26,7 @@ const LINKS = [
   {
     icon: faGlobe,
     label: 'santiagorm.dev',
-    href: 'https://santiagorm.dev',
+    href: 'https://www.santiagorm.dev',
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
         <div className="page-wrap">
           <header className="section-header">
             <span className="section-label">{t('contact.sectionLabel')}</span>
-            <h2 className="section-title">{t('contact.sectionTitle')}</h2>
+            <h1 className="section-title">{t('contact.sectionTitle')}</h1>
             <div className="section-divider" />
           </header>
 

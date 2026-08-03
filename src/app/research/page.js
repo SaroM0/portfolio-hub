@@ -45,7 +45,7 @@ export default function ResearchPage() {
       <div className="page-wrap">
         <header className="section-header">
           <span className="section-label">{t('research.sectionLabel')}</span>
-          <h2 className="section-title">{t('research.sectionTitle')}</h2>
+          <h1 className="section-title">{t('research.sectionTitle')}</h1>
           <div className="section-divider" />
         </header>
 

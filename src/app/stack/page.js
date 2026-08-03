@@ -64,7 +64,7 @@ export default function StackPage() {
       <div className="page-wrap">
         <header className="section-header">
           <span className="section-label">{t('stack.sectionLabel')}</span>
-          <h2 className="section-title">{t('stack.sectionTitle')}</h2>
+          <h1 className="section-title">{t('stack.sectionTitle')}</h1>
           <div className="section-divider" />
         </header>
 

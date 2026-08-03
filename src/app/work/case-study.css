@@ -1,0 +1,109 @@
+.case-study {
+  max-width: 760px;
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--clr-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.case-back:hover { color: var(--clr-accent); }
+
+.case-header {
+  margin-bottom: 2.5rem;
+}
+
+.case-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--clr-text-primary);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--clr-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.case-summary {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--clr-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.case-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: 2.5rem;
+}
+
+.case-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.case-section {
+  margin-bottom: 2.25rem;
+}
+
+.case-section h2 {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 0.75rem;
+}
+
+.case-section p {
+  line-height: 1.7;
+  color: var(--clr-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.case-section ul {
+  margin: 0 0 0.75rem;
+  padding-left: 1.1rem;
+  color: var(--clr-text-secondary);
+  line-height: 1.7;
+}
+
+.case-section li { margin-bottom: 0.35rem; }
+
+.case-footer {
+  padding-top: 2rem;
+  border-top: 1px solid var(--clr-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.confidential-note {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}

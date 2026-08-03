@@ -159,7 +159,7 @@ export default function ExperiencePage() {
       <div className="page-wrap">
         <header className="section-header">
           <span className="section-label">{t('experience.sectionLabel')}</span>
-          <h2 className="section-title">{t('experience.sectionTitle')}</h2>
+          <h1 className="section-title">{t('experience.sectionTitle')}</h1>
           <div className="section-divider" />
         </header>
 

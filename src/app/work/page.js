@@ -1,14 +1,16 @@
 'use client';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLock, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faLock, faArrowUpRightFromSquare, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './work.css';
 
 const PROJECTS = [
   {
     tags: ['production'],
     title: 'Government Legal Document RAG',
+    caseStudySlug: 'legal-document-rag',
     client: 'Government Institution (via Apiux Tech)',
     year: '2025',
     featured: true,
@@ -26,6 +28,7 @@ const PROJECTS = [
   {
     tags: ['research', 'collaboration'],
     title: 'Multi-Agent HCC Clinical Decision Support',
+    caseStudySlug: 'multi-agent-hcc-clinical-ai',
     client: 'University of Cincinnati — Research Collaboration',
     year: '2025–2026',
     featured: true,
@@ -42,6 +45,7 @@ const PROJECTS = [
   {
     tags: ['production', 'confidential'],
     title: 'Legal Archive RAG System',
+    caseStudySlug: 'legal-archive-rag',
     client: 'FLAR — Fondo Latinoamericano de Reservas',
     year: '2025',
     featured: true,
@@ -75,6 +79,7 @@ const PROJECTS = [
   {
     tags: ['production', 'internal'],
     title: 'Multi-Agent Software Delivery System',
+    caseStudySlug: 'multi-agent-software-delivery',
     client: 'Apiux Tech',
     year: '2025–2026',
     description:
@@ -212,6 +217,11 @@ function ProjectCard({ project }) {
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} /> View ↗
           </a>
         )}
+        {project.caseStudySlug && (
+          <Link href={`/work/${project.caseStudySlug}`} className="link-arrow">
+            Read case study <FontAwesomeIcon icon={faArrowRight} />
+          </Link>
+        )}
       </div>
     </article>
   );
@@ -275,7 +285,7 @@ export default function WorkPage() {
       <div className="page-wrap">
         <header className="section-header">
           <span className="section-label">{t('work.sectionLabel')}</span>
-          <h2 className="section-title">{t('work.sectionTitle')}</h2>
+          <h1 className="section-title">{t('work.sectionTitle')}</h1>
           <div className="section-divider" />
         </header>
 

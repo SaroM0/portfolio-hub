@@ -18,18 +18,49 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: 'Santiago Rodríguez — AI Systems Engineer',
+  metadataBase: new URL('https://www.santiagorm.dev'),
+
+  title: {
+    default: 'Santiago Rodríguez Mora | AI Systems Engineer',
+    template: '%s | Santiago Rodríguez Mora',
+  },
+
   description:
-    'AI Systems Engineer specializing in clinical decision support, production RAG systems, and LLM evaluation. ASCO & EASL 2026 researcher. Building reliable, evaluated AI for real-world deployment.',
-  keywords:
-    'AI Systems Engineer, RAG, LLM Evaluation, Clinical AI, Multi-Agent Systems, Python, LangGraph, Production AI',
+    'Santiago Rodríguez Mora is an AI Systems Engineer building production RAG, multi-agent systems, clinical AI and LLM evaluation platforms. ASCO & EASL 2026 researcher.',
+
+  alternates: {
+    canonical: '/',
+  },
+
   openGraph: {
-    title: 'Santiago Rodríguez — AI Systems Engineer',
+    type: 'profile',
+    url: '/',
+    title: 'Santiago Rodríguez Mora | AI Systems Engineer',
     description:
-      'Production RAG · Clinical AI · LLM Evaluation · ASCO & EASL 2026',
-    url: 'https://sntiagorodriguezdev.vercel.app',
-    siteName: 'Santiago Rodríguez',
-    type: 'website',
+      'Production RAG · Multi-Agent Systems · Clinical AI · LLM Evaluation · ASCO & EASL 2026',
+    siteName: 'Santiago Rodríguez Mora',
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  url: 'https://www.santiagorm.dev',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://www.santiagorm.dev/#person',
+    name: 'Santiago Rodríguez Mora',
+    alternateName: 'Santiago Rodriguez Mora',
+    url: 'https://www.santiagorm.dev',
+    jobTitle: 'AI Systems Engineer',
+    sameAs: [
+      'https://www.linkedin.com/in/santiago-rodriguez-mora',
+      'https://github.com/SaroM0',
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Universidad de los Andes',
+    },
   },
 };
 
@@ -40,6 +71,10 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <I18nProvider>
           <Analytics />
           <Navbar />
